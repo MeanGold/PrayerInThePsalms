@@ -331,9 +331,12 @@ function App() {
               <div className="chat-header">
                 {theme === 'editorial' ? (
                   <>
-                    <div>
-                      
-                      <div className="header-title"><BookOpen className="logo-mark" color="#b68a24ff"/> Prayer Companion</div>
+                    <div className="header-left">
+                      <BookOpen className="logo-mark" color="#b68a24ff"/>
+                      <div>
+                        <div className="header-title">Prayer Companion</div>
+                        <div className="header-sub">Consult the Psalms with your Dilemmas</div>
+                      </div>
                     </div>
                   </>
                 ) : (
