@@ -27,6 +27,7 @@
   padding: 1.5rem 2rem;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
+  border-radius: 15px;
 }
 
 .chat-header h1 {
