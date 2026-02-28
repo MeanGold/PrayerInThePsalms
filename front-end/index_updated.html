@@ -1,0 +1,1573 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="manuscript">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PsalmAI — Design Explorer</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Josefin+Sans:wght@300;400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================
+   RESET & BASE
+   ============================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* ============================================
+   THEME SWITCHER (always visible, floating)
+   ============================================ */
+.theme-switcher {
+  position: fixed;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  border-radius: 100px;
+  padding: 5px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.25), 0 1px 4px rgba(0,0,0,0.15);
+  transition: background 0.5s, border-color 0.5s;
+}
+
+.switcher-btn {
+  position: relative;
+  padding: 7px 18px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 100px;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.switcher-btn .num {
+  font-size: 0.6rem;
+  opacity: 0.6;
+}
+
+/* ── Manuscript switcher ── */
+[data-theme="manuscript"] .theme-switcher {
+  background: #f5ead6;
+  border: 2px solid #b8912a;
+}
+[data-theme="manuscript"] .switcher-btn {
+  color: #5c3d1e;
+}
+[data-theme="manuscript"] .switcher-btn.active {
+  background: linear-gradient(135deg, #8b1a1a, #5c1010);
+  color: #f5e6c8;
+}
+[data-theme="manuscript"] .switcher-btn:not(.active):hover {
+  background: rgba(184, 145, 42, 0.15);
+}
+
+/* ── Sacred Night switcher ── */
+[data-theme="sacred-night"] .theme-switcher {
+  background: #141720;
+  border: 1px solid rgba(212, 168, 67, 0.35);
+}
+[data-theme="sacred-night"] .switcher-btn {
+  color: #6e7282;
+}
+[data-theme="sacred-night"] .switcher-btn.active {
+  background: rgba(212, 168, 67, 0.15);
+  color: #d4a843;
+  border: 1px solid rgba(212, 168, 67, 0.4);
+}
+[data-theme="sacred-night"] .switcher-btn:not(.active):hover {
+  color: #c8cad0;
+}
+
+/* ── Editorial switcher ── */
+[data-theme="editorial"] .theme-switcher {
+  background: #faf8f5;
+  border: 1px solid #e6e0d8;
+}
+[data-theme="editorial"] .switcher-btn {
+  color: #6b6560;
+}
+[data-theme="editorial"] .switcher-btn.active {
+  background: #2d2926;
+  color: #faf8f5;
+}
+[data-theme="editorial"] .switcher-btn:not(.active):hover {
+  background: #e6e0d8;
+}
+
+/* ============================================
+   PAGE WRAPPER
+   ============================================ */
+.page {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.5s;
+}
+
+/* ============================================
+   THEME 1: ILLUMINATED MANUSCRIPT
+   ============================================ */
+[data-theme="manuscript"] .page {
+  background: #e8d5b0;
+  font-family: 'EB Garamond', Georgia, serif;
+}
+
+[data-theme="manuscript"] .page::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.06'/%3E%3C/svg%3E");
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+[data-theme="manuscript"] .chat-shell {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 760px;
+  height: 88vh;
+  background: #f5ead6;
+  display: flex;
+  flex-direction: column;
+  border: 3px solid #b8912a;
+  box-shadow: 0 0 0 8px #e8d5b0, 0 0 0 10px #b8912a, 8px 12px 40px rgba(0,0,0,0.4);
+  margin-top: 52px;
+}
+
+/* Corners */
+[data-theme="manuscript"] .corner {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  z-index: 10;
+}
+[data-theme="manuscript"] .corner svg { width: 100%; height: 100%; }
+[data-theme="manuscript"] .corner-tl { top: 6px; left: 6px; }
+[data-theme="manuscript"] .corner-tr { top: 6px; right: 6px; transform: scaleX(-1); }
+[data-theme="manuscript"] .corner-bl { bottom: 6px; left: 6px; transform: scaleY(-1); }
+[data-theme="manuscript"] .corner-br { bottom: 6px; right: 6px; transform: scale(-1); }
+
+[data-theme="manuscript"] .chat-header {
+  padding: 1.25rem 2rem 0.75rem;
+  text-align: center;
+  border-bottom: 2px solid #b8912a;
+  background: linear-gradient(180deg, #f0ddb8 0%, #f5ead6 100%);
+  position: relative;
+}
+[data-theme="manuscript"] .header-ornament {
+  color: #c9941a;
+  font-size: 0.85rem;
+  letter-spacing: 0.5rem;
+  margin-bottom: 0.3rem;
+  display: block;
+}
+[data-theme="manuscript"] .header-title {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 1.55rem;
+  font-weight: 700;
+  color: #2c1e0f;
+  letter-spacing: 0.05em;
+}
+[data-theme="manuscript"] .header-title span { color: #c9941a; }
+[data-theme="manuscript"] .header-sub {
+  font-style: italic;
+  color: #5c3d1e;
+  font-size: 0.9rem;
+  margin-top: 0.2rem;
+}
+[data-theme="manuscript"] .header-divider {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.4rem 2rem 0;
+  color: #c9941a;
+}
+[data-theme="manuscript"] .header-divider::before,
+[data-theme="manuscript"] .header-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #b8912a, transparent);
+}
+
+[data-theme="manuscript"] .chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  background: #f5ead6;
+}
+[data-theme="manuscript"] .chat-messages::-webkit-scrollbar { width: 6px; }
+[data-theme="manuscript"] .chat-messages::-webkit-scrollbar-thumb { background: #b8912a; border-radius: 3px; }
+
+[data-theme="manuscript"] .msg { display: flex; flex-direction: column; animation: fadeUp 0.4s ease-out; }
+[data-theme="manuscript"] .msg-user { align-items: flex-end; }
+[data-theme="manuscript"] .msg-bot { align-items: flex-start; }
+
+[data-theme="manuscript"] .msg-label {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 0.58rem;
+  letter-spacing: 0.15em;
+  color: #5c3d1e;
+  margin-bottom: 0.3rem;
+  opacity: 0.7;
+}
+[data-theme="manuscript"] .msg-user .msg-label { color: #8b1a1a; }
+
+[data-theme="manuscript"] .msg-bubble {
+  max-width: 72%;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #2c1e0f;
+}
+[data-theme="manuscript"] .msg-bot .msg-bubble {
+  padding: 0 0 0 1.25rem;
+  border-left: 3px solid #c9941a;
+}
+[data-theme="manuscript"] .msg-user .msg-bubble {
+  background: linear-gradient(135deg, #8b1a1a, #5c1010);
+  color: #f5e6c8;
+  padding: 0.875rem 1.25rem;
+  box-shadow: 3px 3px 0 rgba(0,0,0,0.15);
+}
+
+[data-theme="manuscript"] .verse-ref {
+  display: inline-block;
+  font-size: 0.72rem;
+  color: #c9941a;
+  font-style: italic;
+  margin-top: 0.5rem;
+  border-bottom: 1px solid #e8b84b;
+}
+
+[data-theme="manuscript"] .msg-time {
+  font-size: 0.65rem;
+  color: #5c3d1e;
+  opacity: 0.5;
+  margin-top: 0.3rem;
+  font-style: italic;
+}
+
+[data-theme="manuscript"] .input-zone {
+  padding: 0.875rem 2rem 1.1rem;
+  border-top: 2px solid #b8912a;
+  background: linear-gradient(0deg, #f0ddb8, #f5ead6);
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+[data-theme="manuscript"] .chat-input {
+  flex: 1;
+  padding: 0.75rem 1.25rem;
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 1rem;
+  color: #2c1e0f;
+  background: #fdf6e3;
+  border: 1px solid #b8912a;
+  border-radius: 2px;
+  outline: none;
+  transition: box-shadow 0.2s;
+}
+[data-theme="manuscript"] .chat-input:focus {
+  box-shadow: 0 0 0 2px rgba(201,148,26,0.3);
+}
+[data-theme="manuscript"] .chat-input::placeholder { color: #b8a080; font-style: italic; }
+[data-theme="manuscript"] .send-btn {
+  width: 44px; height: 44px;
+  border: 2px solid #c9941a;
+  background: transparent;
+  color: #c9941a;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+[data-theme="manuscript"] .send-btn:hover {
+  background: #c9941a;
+  color: white;
+}
+
+/* ============================================
+   THEME 2: SACRED NIGHT
+   ============================================ */
+[data-theme="sacred-night"] .page {
+  background: #0d0f14;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+[data-theme="sacred-night"] .page::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(212,168,67,0.04) 0%, transparent 60%),
+    radial-gradient(circle at 20% 80%, rgba(74,111,165,0.06) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+[data-theme="sacred-night"] .geo-bg {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  opacity: 0.06;
+}
+
+[data-theme="sacred-night"] .chat-shell {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  width: 100%;
+  max-width: 720px;
+  height: 88vh;
+  background: #141720;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(212,168,67,0.2);
+  box-shadow: 0 0 60px rgba(0,0,0,0.6), 0 0 120px rgba(212,168,67,0.03);
+  margin-top: 52px;
+}
+
+[data-theme="sacred-night"] .geo-bar {
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #8a6c2a 30%, #d4a843 50%, #8a6c2a 70%, transparent);
+}
+
+[data-theme="sacred-night"] .chat-header {
+  padding: 1.25rem 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+[data-theme="sacred-night"] .header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+[data-theme="sacred-night"] .logo-mark {
+  width: 34px; height: 34px; flex-shrink: 0;
+}
+[data-theme="sacred-night"] .header-title {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  font-size: 1.1rem;
+  color: #f0f1f5;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+[data-theme="sacred-night"] .header-title span { color: #d4a843; }
+[data-theme="sacred-night"] .header-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+[data-theme="sacred-night"] .pulse-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: #d4a843;
+  animation: breathe 2.5s ease-in-out infinite;
+}
+@keyframes breathe {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+[data-theme="sacred-night"] .header-status {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.15em;
+  color: #6e7282;
+  text-transform: uppercase;
+}
+
+[data-theme="sacred-night"] .chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background: #141720;
+}
+[data-theme="sacred-night"] .chat-messages::-webkit-scrollbar { width: 4px; }
+[data-theme="sacred-night"] .chat-messages::-webkit-scrollbar-thumb { background: rgba(212,168,67,0.2); }
+
+[data-theme="sacred-night"] .msg { display: flex; flex-direction: column; animation: fadeUp 0.5s cubic-bezier(0.22,1,0.36,1); }
+[data-theme="sacred-night"] .msg-user { align-items: flex-end; }
+[data-theme="sacred-night"] .msg-bot { align-items: flex-start; }
+
+[data-theme="sacred-night"] .msg-label {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.58rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #6e7282;
+  margin-bottom: 0.5rem;
+}
+[data-theme="sacred-night"] .msg-bot .msg-label { color: #8a6c2a; }
+
+[data-theme="sacred-night"] .msg-bubble {
+  max-width: 75%;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #c8cad0;
+  position: relative;
+}
+[data-theme="sacred-night"] .msg-bot .msg-bubble {
+  padding: 1.25rem 0 1.25rem 1.5rem;
+  border-left: 1px solid #8a6c2a;
+  color: #f0f1f5;
+}
+[data-theme="sacred-night"] .msg-bot .msg-bubble::before {
+  content: '\201C';
+  position: absolute;
+  left: -1px;
+  top: 0.5rem;
+  font-size: 3rem;
+  color: #d4a843;
+  opacity: 0.3;
+  font-family: Georgia, serif;
+  line-height: 1;
+}
+[data-theme="sacred-night"] .msg-user .msg-bubble {
+  background: rgba(74,111,165,0.15);
+  border: 1px solid rgba(74,111,165,0.3);
+  padding: 1rem 1.25rem;
+}
+[data-theme="sacred-night"] .verse-ref {
+  margin-top: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  color: #d4a843;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+[data-theme="sacred-night"] .verse-ref::before {
+  content: '';
+  display: block;
+  width: 16px;
+  height: 1px;
+  background: #d4a843;
+  opacity: 0.5;
+}
+[data-theme="sacred-night"] .msg-time { display: none; }
+
+[data-theme="sacred-night"] .input-zone {
+  padding: 1.25rem 2.5rem 1.25rem;
+  background: #1c2030;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+[data-theme="sacred-night"] .input-row {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+[data-theme="sacred-night"] .chat-input {
+  flex: 1;
+  padding: 0.875rem 1.25rem;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1rem;
+  color: #f0f1f5;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(212,168,67,0.3);
+  outline: none;
+  transition: all 0.2s;
+}
+[data-theme="sacred-night"] .chat-input:focus { border-bottom-color: #d4a843; }
+[data-theme="sacred-night"] .chat-input::placeholder { color: #6e7282; font-style: italic; }
+[data-theme="sacred-night"] .send-btn {
+  width: 44px; height: 44px;
+  border: 1px solid #8a6c2a;
+  background: transparent;
+  color: #d4a843;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.25s;
+  flex-shrink: 0;
+}
+[data-theme="sacred-night"] .send-btn:hover {
+  background: rgba(212,168,67,0.1);
+  border-color: #d4a843;
+  box-shadow: 0 0 20px rgba(212,168,67,0.15);
+}
+[data-theme="sacred-night"] .footer-note {
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.58rem;
+  letter-spacing: 0.12em;
+  color: #6e7282;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+
+/* ============================================
+   THEME 3: EDITORIAL
+   ============================================ */
+[data-theme="editorial"] .page {
+  background: #f4f0eb;
+  font-family: 'DM Sans', sans-serif;
+  align-items: stretch;
+}
+
+[data-theme="editorial"] .chat-shell {
+  width: 100%;
+  max-width: 1100px;
+  height: 88vh;
+  display: flex;
+  flex-direction: row;
+  margin: 52px auto 0;
+  border: 1px solid #e6e0d8;
+  box-shadow: 0 8px 48px rgba(0,0,0,0.1);
+  background: #faf8f5;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Sidebar — slide-out panel */
+[data-theme="editorial"] .sidebar {
+  display: flex;
+  width: 240px;
+  flex-shrink: 0;
+  flex-direction: column;
+  background: #faf8f5;
+  border-right: 1px solid #e6e0d8;
+  padding: 1.75rem 1.25rem;
+  gap: 1.5rem;
+  /* slide behaviour */
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 100;
+  transform: translateX(-100%);
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.3s ease;
+  overflow-y: auto;
+}
+[data-theme="editorial"] .sidebar.open {
+  transform: translateX(0);
+  box-shadow: 4px 0 24px rgba(0,0,0,0.1);
+}
+/* Backdrop */
+[data-theme="editorial"] .sidebar-backdrop {
+  display: none;
+  position: absolute;
+  inset: 0;
+  background: rgba(45, 41, 38, 0.25);
+  z-index: 99;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+[data-theme="editorial"] .sidebar-backdrop.visible {
+  display: block;
+  opacity: 1;
+}
+/* Hamburger button */
+[data-theme="editorial"] .hamburger-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  padding: 8px;
+  border: 1px solid #e6e0d8;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 4px;
+  flex-shrink: 0;
+  transition: background 0.15s, border-color 0.15s;
+}
+[data-theme="editorial"] .hamburger-btn:hover {
+  background: #f4f0eb;
+  border-color: #c5bdb4;
+}
+[data-theme="editorial"] .hamburger-btn span {
+  display: block;
+  width: 100%;
+  height: 1.5px;
+  background: #6b6560;
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.2s ease;
+  transform-origin: center;
+}
+[data-theme="editorial"] .hamburger-btn.open span:nth-child(1) {
+  transform: translateY(6.5px) rotate(45deg);
+}
+[data-theme="editorial"] .hamburger-btn.open span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+[data-theme="editorial"] .hamburger-btn.open span:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg);
+}
+[data-theme="editorial"] .sidebar-logo h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2d2926;
+  line-height: 1;
+}
+[data-theme="editorial"] .sidebar-logo p {
+  font-size: 0.65rem;
+  color: #6b6560;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-top: 0.2rem;
+}
+[data-theme="editorial"] .sidebar-divider {
+  height: 1px;
+  background: #e6e0d8;
+}
+[data-theme="editorial"] .sidebar-section-label {
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #b8a898;
+  font-weight: 400;
+  margin-bottom: 0.6rem;
+}
+[data-theme="editorial"] .psalm-of-day {
+  background: #f4f0eb;
+  border: 1px solid #e6e0d8;
+  padding: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+[data-theme="editorial"] .psalm-of-day::before {
+  content: '✦';
+  position: absolute;
+  top: -8px;
+  right: 10px;
+  font-size: 2rem;
+  color: #c26b4a;
+  opacity: 0.12;
+}
+[data-theme="editorial"] .psalm-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  color: #c26b4a;
+  opacity: 0.22;
+  line-height: 1;
+}
+[data-theme="editorial"] .psalm-title {
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #c26b4a;
+  margin-bottom: 0.4rem;
+}
+[data-theme="editorial"] .psalm-excerpt {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.8rem;
+  font-style: italic;
+  line-height: 1.5;
+  color: #6b6560;
+}
+[data-theme="editorial"] .nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  margin-top: auto;
+}
+[data-theme="editorial"] .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.55rem 0.6rem;
+  font-size: 0.78rem;
+  color: #6b6560;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.15s;
+}
+[data-theme="editorial"] .nav-link:hover { background: #e6e0d8; color: #2d2926; }
+[data-theme="editorial"] .nav-link.active { background: #e6e0d8; color: #2d2926; }
+
+/* Main area */
+[data-theme="editorial"] .main-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  width: 100%;
+}
+[data-theme="editorial"] .chat-header {
+  padding: 1.25rem 2rem;
+  border-bottom: 1px solid #e6e0d8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #faf8f5;
+}
+[data-theme="editorial"] .header-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem;
+  color: #2d2926;
+}
+[data-theme="editorial"] .header-sub {
+  font-size: 0.72rem;
+  color: #6b6560;
+  margin-top: 0.1rem;
+  font-weight: 300;
+}
+[data-theme="editorial"] .header-tags {
+  display: flex;
+  gap: 0.5rem;
+}
+[data-theme="editorial"] .tag {
+  padding: 0.22rem 0.7rem;
+  background: #f4f0eb;
+  border: 1px solid #e6e0d8;
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #6b6560;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+[data-theme="editorial"] .tag:hover { background: #e6e0d8; }
+[data-theme="editorial"] .tag.active { background: #8a9e8c; border-color: #8a9e8c; color: white; }
+
+[data-theme="editorial"] .chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  background: #f4f0eb;
+}
+[data-theme="editorial"] .chat-messages::-webkit-scrollbar { width: 4px; }
+[data-theme="editorial"] .chat-messages::-webkit-scrollbar-thumb { background: #e6e0d8; }
+
+[data-theme="editorial"] .msg { display: flex; flex-direction: column; animation: fadeUp 0.35s cubic-bezier(0.22,1,0.36,1); }
+[data-theme="editorial"] .msg-user { align-items: flex-end; }
+[data-theme="editorial"] .msg-bot { align-items: flex-start; }
+
+[data-theme="editorial"] .msg-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.75rem;
+}
+[data-theme="editorial"] .msg-user .msg-row { flex-direction: row-reverse; }
+
+[data-theme="editorial"] .avatar {
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.62rem;
+  font-weight: 400;
+}
+[data-theme="editorial"] .avatar-bot { background: #8a9e8c; color: white; }
+[data-theme="editorial"] .avatar-user { background: #c26b4a; color: white; }
+
+[data-theme="editorial"] .msg-bubble {
+  max-width: 70%;
+  padding: 0.875rem 1.1rem;
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+[data-theme="editorial"] .msg-bot .msg-bubble {
+  background: #faf8f5;
+  border: 1px solid #e6e0d8;
+  color: #2d2926;
+  border-radius: 0 10px 10px 10px;
+}
+[data-theme="editorial"] .msg-user .msg-bubble {
+  background: #2d2926;
+  color: #faf8f5;
+  border-radius: 10px 0 10px 10px;
+}
+[data-theme="editorial"] .verse-ref {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #e6e0d8;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 0.82rem;
+  color: #c26b4a;
+  line-height: 1.5;
+  display: block;
+}
+[data-theme="editorial"] .verse-cite {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 0.65rem;
+  font-style: normal;
+  font-family: 'DM Sans', sans-serif;
+  color: #6b6560;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+[data-theme="editorial"] .msg-label { display: none; }
+[data-theme="editorial"] .msg-time {
+  font-size: 0.62rem;
+  color: #b8a898;
+  margin-top: 0.35rem;
+  padding: 0 2.5rem;
+}
+[data-theme="editorial"] .msg-user .msg-time { text-align: right; }
+
+[data-theme="editorial"] .input-zone {
+  padding: 1rem 2rem 1.25rem;
+  background: #faf8f5;
+  border-top: 1px solid #e6e0d8;
+}
+[data-theme="editorial"] .input-row {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  background: #f4f0eb;
+  border: 1px solid #e6e0d8;
+  padding: 0.4rem 0.4rem 0.4rem 1.1rem;
+  transition: all 0.2s;
+}
+[data-theme="editorial"] .input-row:focus-within {
+  border-color: #8a9e8c;
+  box-shadow: 0 0 0 3px rgba(138,158,140,0.12);
+}
+[data-theme="editorial"] .chat-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.875rem;
+  color: #2d2926;
+  outline: none;
+  padding: 0.3rem 0;
+}
+[data-theme="editorial"] .chat-input::placeholder { color: #b8a898; }
+[data-theme="editorial"] .send-btn {
+  width: 34px; height: 34px;
+  border: none;
+  background: #2d2926;
+  color: #faf8f5;
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.15s;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+[data-theme="editorial"] .send-btn:hover { background: #c26b4a; }
+[data-theme="editorial"] .hint-chips {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.65rem;
+  flex-wrap: wrap;
+}
+[data-theme="editorial"] .hint-chip {
+  padding: 0.2rem 0.7rem;
+  background: transparent;
+  border: 1px solid #e6e0d8;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.68rem;
+  color: #6b6560;
+  cursor: pointer;
+  border-radius: 100px;
+  transition: all 0.15s;
+}
+[data-theme="editorial"] .hint-chip:hover { background: #e6e0d8; color: #2d2926; }
+
+/* ── Manuscript sidebar ── */
+[data-theme="manuscript"] .sidebar {
+  display: flex;
+  position: absolute;
+  top: 0; left: 0;
+  width: 230px;
+  height: 100%;
+  z-index: 100;
+  flex-direction: column;
+  background: #f0ddb8;
+  border-right: 2px solid #b8912a;
+  padding: 1.5rem 1.25rem;
+  gap: 1.25rem;
+  transform: translateX(-100%);
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease;
+  overflow-y: auto;
+  font-family: 'EB Garamond', Georgia, serif;
+}
+[data-theme="manuscript"] .sidebar.open {
+  transform: translateX(0);
+  box-shadow: 6px 0 30px rgba(44,30,15,0.25);
+}
+[data-theme="manuscript"] .sidebar-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(44,30,15,0.3);
+  z-index: 99;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: none;
+}
+[data-theme="manuscript"] .sidebar-backdrop.visible {
+  display: block;
+  opacity: 1;
+}
+[data-theme="manuscript"] .sidebar-logo h1 {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 1.15rem;
+  color: #2c1e0f;
+  line-height: 1.2;
+}
+[data-theme="manuscript"] .sidebar-logo p {
+  font-style: italic;
+  font-size: 0.75rem;
+  color: #5c3d1e;
+  margin-top: 0.2rem;
+}
+[data-theme="manuscript"] .sidebar-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #b8912a, transparent);
+}
+[data-theme="manuscript"] .sidebar-section-label {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 0.55rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #8a6c2a;
+  margin-bottom: 0.6rem;
+}
+[data-theme="manuscript"] .nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+[data-theme="manuscript"] .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 0.75rem;
+  font-size: 0.9rem;
+  color: #5c3d1e;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.15s;
+}
+[data-theme="manuscript"] .nav-link:hover {
+  background: rgba(184,145,42,0.12);
+  border-color: rgba(184,145,42,0.3);
+  color: #2c1e0f;
+}
+[data-theme="manuscript"] .nav-link.active {
+  background: rgba(139,26,26,0.08);
+  border-color: rgba(139,26,26,0.2);
+  color: #8b1a1a;
+}
+/* Hamburger for manuscript */
+[data-theme="manuscript"] .hamburger-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 34px; height: 34px;
+  padding: 7px;
+  border: 2px solid #b8912a;
+  background: transparent;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+[data-theme="manuscript"] .hamburger-btn:hover { background: rgba(184,145,42,0.15); }
+[data-theme="manuscript"] .hamburger-btn span {
+  display: block;
+  width: 100%; height: 1.5px;
+  background: #5c3d1e;
+  border-radius: 1px;
+  transition: transform 0.25s ease, opacity 0.2s ease;
+  transform-origin: center;
+}
+[data-theme="manuscript"] .hamburger-btn.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+[data-theme="manuscript"] .hamburger-btn.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+[data-theme="manuscript"] .hamburger-btn.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+/* ── Sacred Night sidebar ── */
+[data-theme="sacred-night"] .sidebar {
+  display: flex;
+  position: absolute;
+  top: 0; left: 0;
+  width: 230px;
+  height: 100%;
+  z-index: 100;
+  flex-direction: column;
+  background: #0d0f14;
+  border-right: 1px solid rgba(212,168,67,0.25);
+  padding: 1.5rem 1.25rem;
+  gap: 1.25rem;
+  transform: translateX(-100%);
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s ease;
+  overflow-y: auto;
+}
+[data-theme="sacred-night"] .sidebar.open {
+  transform: translateX(0);
+  box-shadow: 6px 0 40px rgba(0,0,0,0.6);
+}
+[data-theme="sacred-night"] .sidebar-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 99;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: none;
+}
+[data-theme="sacred-night"] .sidebar-backdrop.visible {
+  display: block;
+  opacity: 1;
+}
+[data-theme="sacred-night"] .sidebar-logo h1 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #f0f1f5;
+}
+[data-theme="sacred-night"] .sidebar-logo h1 span { color: #d4a843; }
+[data-theme="sacred-night"] .sidebar-logo p {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #6e7282;
+  margin-top: 0.2rem;
+}
+[data-theme="sacred-night"] .sidebar-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212,168,67,0.3), transparent);
+}
+[data-theme="sacred-night"] .sidebar-section-label {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.55rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #8a6c2a;
+  margin-bottom: 0.6rem;
+}
+[data-theme="sacred-night"] .nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+[data-theme="sacred-night"] .nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 0.75rem;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #6e7282;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.15s;
+}
+[data-theme="sacred-night"] .nav-link:hover {
+  background: rgba(212,168,67,0.06);
+  border-color: rgba(212,168,67,0.15);
+  color: #c8cad0;
+}
+[data-theme="sacred-night"] .nav-link.active {
+  color: #d4a843;
+  border-color: rgba(212,168,67,0.2);
+}
+/* Hamburger for sacred night */
+[data-theme="sacred-night"] .hamburger-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 34px; height: 34px;
+  padding: 7px;
+  border: 1px solid rgba(212,168,67,0.3);
+  background: transparent;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all 0.15s;
+}
+[data-theme="sacred-night"] .hamburger-btn:hover {
+  background: rgba(212,168,67,0.08);
+  border-color: rgba(212,168,67,0.5);
+}
+[data-theme="sacred-night"] .hamburger-btn span {
+  display: block;
+  width: 100%; height: 1.5px;
+  background: #d4a843;
+  border-radius: 1px;
+  transition: transform 0.25s ease, opacity 0.2s ease;
+  transform-origin: center;
+}
+[data-theme="sacred-night"] .hamburger-btn.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+[data-theme="sacred-night"] .hamburger-btn.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+[data-theme="sacred-night"] .hamburger-btn.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+/* Elements only for specific themes */
+.corner, .geo-bg, .geo-bar, .footer-note,
+.header-ornament, .header-divider, .header-left, .header-right,
+.pulse-dot, .header-status, .logo-mark, .hint-chips,
+.header-tags, .psalm-of-day, .nav-links, .main-col,
+.avatar, .msg-row { display: none; }
+
+/* Sidebar always hidden until opened — each theme controls it via .sidebar.open */
+.sidebar { display: none; }
+
+/* manuscript shows */
+[data-theme="manuscript"] .corner { display: block; }
+[data-theme="manuscript"] .header-ornament,
+[data-theme="manuscript"] .header-divider { display: flex; }
+[data-theme="manuscript"] .header-ornament { display: block; }
+[data-theme="manuscript"] .main-col { display: flex; flex-direction: column; flex: 1; min-height: 0; }
+[data-theme="manuscript"] .chat-messages { min-height: 0; }
+[data-theme="manuscript"] .msg-row { display: flex; }
+[data-theme="manuscript"] .input-row { display: flex; }
+
+/* sacred-night shows */
+[data-theme="sacred-night"] .geo-bg { display: flex; }
+[data-theme="sacred-night"] .geo-bar { display: block; }
+[data-theme="sacred-night"] .header-left,
+[data-theme="sacred-night"] .header-right { display: flex; }
+[data-theme="sacred-night"] .pulse-dot { display: block; }
+[data-theme="sacred-night"] .logo-mark { display: block; }
+[data-theme="sacred-night"] .header-status { display: block; }
+[data-theme="sacred-night"] .footer-note { display: block; }
+[data-theme="sacred-night"] .input-row { display: flex; }
+[data-theme="sacred-night"] .main-col { display: flex; flex-direction: column; flex: 1; min-height: 0; }
+[data-theme="sacred-night"] .chat-messages { min-height: 0; }
+[data-theme="sacred-night"] .msg-row { display: flex; }
+
+/* editorial shows */
+[data-theme="editorial"] .main-col { display: flex; }
+[data-theme="editorial"] .hint-chips { display: flex; }
+[data-theme="editorial"] .header-tags { display: flex; }
+[data-theme="editorial"] .avatar { display: flex; }
+[data-theme="editorial"] .msg-row { display: flex; }
+[data-theme="editorial"] .psalm-of-day { display: block; }
+[data-theme="editorial"] .nav-links { display: flex; }
+[data-theme="editorial"] .input-row { display: flex; }
+
+.hamburger-btn { display: none; }
+[data-theme="manuscript"] .hamburger-btn { display: flex; }
+[data-theme="sacred-night"] .hamburger-btn { display: flex; }
+[data-theme="editorial"] .hamburger-btn { display: flex; }
+.header-manuscript, .header-sacred-night, .header-editorial { display: none; }
+[data-theme="manuscript"] .header-manuscript { display: flex; flex-direction: column; align-items: center; text-align: center; }
+[data-theme="sacred-night"] .header-sacred-night { display: flex; flex-direction: row; align-items: center; justify-content: space-between; }
+[data-theme="editorial"] .header-editorial { display: flex; flex-direction: row; align-items: center; justify-content: space-between; }
+
+/* Messages layout */
+.msg-label { display: block; }
+[data-theme="editorial"] .msg-label { display: none; }
+
+/* Sacred night input row */
+[data-theme="sacred-night"] .input-row { display: flex; }
+
+/* ============================================
+   ANIMATION (shared)
+   ============================================ */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Theme transition */
+.chat-shell, .page, .chat-header, .chat-messages,
+.input-zone, .msg-bubble, .send-btn {
+  transition: background 0.45s ease, border-color 0.45s ease, color 0.45s ease, box-shadow 0.45s ease;
+}
+
+/* ============================================
+   THEME TRANSITION OVERLAY
+   ============================================ */
+.transition-overlay {
+  position: fixed;
+  inset: 0;
+  background: black;
+  z-index: 9000;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+.transition-overlay.flash { opacity: 0.15; }
+</style>
+</head>
+<body>
+
+<!-- Theme Switcher -->
+<div class="theme-switcher" id="switcher">
+  <button class="switcher-btn active" data-theme="manuscript">
+    <span class="num">I</span> Manuscript
+  </button>
+  <button class="switcher-btn" data-theme="sacred-night">
+    <span class="num">II</span> Sacred Night
+  </button>
+  <button class="switcher-btn" data-theme="editorial">
+    <span class="num">III</span> Editorial
+  </button>
+</div>
+
+<!-- Flash overlay for transitions -->
+<div class="transition-overlay" id="overlay"></div>
+
+<!-- Sacred night geometry background -->
+<div class="geo-bg">
+  <svg width="600" height="600" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="300" cy="300" r="280" stroke="#d4a843" stroke-width="0.5"/>
+    <circle cx="300" cy="300" r="200" stroke="#d4a843" stroke-width="0.5"/>
+    <circle cx="300" cy="300" r="120" stroke="#d4a843" stroke-width="0.5"/>
+    <line x1="300" y1="20" x2="300" y2="580" stroke="#d4a843" stroke-width="0.5"/>
+    <line x1="20" y1="300" x2="580" y2="300" stroke="#d4a843" stroke-width="0.5"/>
+    <line x1="60" y1="60" x2="540" y2="540" stroke="#d4a843" stroke-width="0.5"/>
+    <line x1="540" y1="60" x2="60" y2="540" stroke="#d4a843" stroke-width="0.5"/>
+    <polygon points="300,60 540,420 60,420" stroke="#d4a843" stroke-width="0.5" fill="none"/>
+    <polygon points="300,540 60,180 540,180" stroke="#d4a843" stroke-width="0.5" fill="none"/>
+  </svg>
+</div>
+
+<div class="page">
+  <div class="chat-shell">
+
+    <!-- Manuscript corners -->
+    <div class="corner corner-tl">
+      <svg viewBox="0 0 48 48" fill="none"><path d="M4 4 L20 4 M4 4 L4 20" stroke="#c9941a" stroke-width="2"/><circle cx="4" cy="4" r="2" fill="#c9941a"/></svg>
+    </div>
+    <div class="corner corner-tr">
+      <svg viewBox="0 0 48 48" fill="none"><path d="M4 4 L20 4 M4 4 L4 20" stroke="#c9941a" stroke-width="2"/><circle cx="4" cy="4" r="2" fill="#c9941a"/></svg>
+    </div>
+    <div class="corner corner-bl">
+      <svg viewBox="0 0 48 48" fill="none"><path d="M4 4 L20 4 M4 4 L4 20" stroke="#c9941a" stroke-width="2"/><circle cx="4" cy="4" r="2" fill="#c9941a"/></svg>
+    </div>
+    <div class="corner corner-br">
+      <svg viewBox="0 0 48 48" fill="none"><path d="M4 4 L20 4 M4 4 L4 20" stroke="#c9941a" stroke-width="2"/><circle cx="4" cy="4" r="2" fill="#c9941a"/></svg>
+    </div>
+
+    <!-- Sacred Night geo bar -->
+    <div class="geo-bar"></div>
+
+    <!-- Editorial sidebar backdrop -->
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+    <!-- ════════════════ EDITORIAL SIDEBAR ════════════════ -->
+    <div class="sidebar">
+      <div class="sidebar-logo">
+        <h1>Psalm</h1>
+        <p>Daily Scripture Companion</p>
+      </div>
+      <div class="sidebar-divider"></div>
+      <div>
+        <div class="sidebar-section-label">Today's Psalm</div>
+        <div class="psalm-of-day">
+          <div class="psalm-number">119</div>
+          <div class="psalm-title">Psalm of the Day</div>
+          <p class="psalm-excerpt">"Thy word is a lamp unto my feet, and a light unto my path."</p>
+        </div>
+      </div>
+      <div class="nav-links">
+        <div class="nav-link active">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          Chat
+        </div>
+        <div class="nav-link">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          All Psalms
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ════════════════ MAIN COLUMN (editorial wraps this; others use it directly) ════════════════ -->
+    <div class="main-col">
+
+      <!-- HEADER: Manuscript -->
+      <div class="chat-header header-manuscript">
+        <button class="hamburger-btn" id="hamburgerBtnManuscript" aria-label="Toggle sidebar" style="position:absolute;left:1.25rem;top:50%;transform:translateY(-50%);">
+          <span></span><span></span><span></span>
+        </button>
+        <span class="header-ornament">✦ ✦ ✦</span>
+        <div style="font-family:'Cinzel Decorative',serif;font-size:1.5rem;font-weight:700;color:#2c1e0f;letter-spacing:0.05em;">
+          Psalm<span style="color:#c9941a;">AI</span>
+        </div>
+        <p style="font-style:italic;color:#5c3d1e;font-size:0.88rem;margin-top:0.2rem;">Ancient Words for the Present Moment</p>
+        <div class="header-divider">✦</div>
+      </div>
+
+      <!-- HEADER: Sacred Night -->
+      <div class="chat-header header-sacred-night">
+        <div class="header-left">
+          <button class="hamburger-btn" id="hamburgerBtnSacredNight" aria-label="Toggle sidebar">
+            <span></span><span></span><span></span>
+          </button>
+          <svg class="logo-mark" viewBox="0 0 34 34" fill="none">
+            <circle cx="17" cy="17" r="15" stroke="#d4a843" stroke-width="1" opacity="0.4"/>
+            <circle cx="17" cy="17" r="9" stroke="#d4a843" stroke-width="1" opacity="0.6"/>
+            <circle cx="17" cy="17" r="2.5" fill="#d4a843" opacity="0.8"/>
+            <line x1="17" y1="2" x2="17" y2="32" stroke="#d4a843" stroke-width="0.75" opacity="0.3"/>
+            <line x1="2" y1="17" x2="32" y2="17" stroke="#d4a843" stroke-width="0.75" opacity="0.3"/>
+          </svg>
+          <div style="font-family:'Josefin Sans',sans-serif;font-weight:300;font-size:1.05rem;color:#f0f1f5;letter-spacing:0.25em;text-transform:uppercase;">
+            PSALM<span style="color:#d4a843;">AI</span>
+          </div>
+        </div>
+        <div class="header-right">
+          <div class="pulse-dot"></div>
+          <span class="header-status">Listening</span>
+        </div>
+      </div>
+
+      <!-- HEADER: Editorial -->
+      <div class="chat-header header-editorial">
+        <div style="display:flex;align-items:center;gap:0.875rem;">
+          <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle sidebar">
+            <span></span><span></span><span></span>
+          </button>
+          <div>
+            <div style="font-family:'Playfair Display',serif;font-size:1.05rem;color:#2d2926;">Scripture Chat</div>
+            <div style="font-size:0.72rem;color:#6b6560;margin-top:0.1rem;font-weight:300;">Ask anything about the Psalms</div>
+          </div>
+        </div>
+        <div class="header-tags">
+          <div class="tag active">Psalms</div>
+          <div class="tag">Hebrew</div>
+          <div class="tag">History</div>
+        </div>
+      </div>
+
+      <!-- MESSAGES -->
+      <div class="chat-messages" id="messages">
+
+        <!-- Message 1: Bot -->
+        <div class="msg msg-bot">
+          <div class="msg-label">Scripture</div>
+          <div class="msg-row">
+            <div class="avatar avatar-bot">✦</div>
+            <div class="msg-bubble">
+              <p>The Lord is my shepherd; I shall not want. He maketh me to lie down in green pastures: he leadeth me beside the still waters. He restoreth my soul.</p>
+              <span class="verse-ref">
+                Psalm 23:1–3 (KJV)
+                <span class="verse-cite">Old Testament · Book of Psalms</span>
+              </span>
+            </div>
+          </div>
+          <span class="msg-time">9:00 AM</span>
+        </div>
+
+        <!-- Message 2: User -->
+        <div class="msg msg-user">
+          <div class="msg-label">You</div>
+          <div class="msg-row">
+            <div class="avatar avatar-user">Me</div>
+            <div class="msg-bubble">
+              <p>I'm going through a difficult season. Which psalms speak to grief?</p>
+            </div>
+          </div>
+          <span class="msg-time">9:02 AM</span>
+        </div>
+
+        <!-- Message 3: Bot -->
+        <div class="msg msg-bot">
+          <div class="msg-label">Scripture</div>
+          <div class="msg-row">
+            <div class="avatar avatar-bot">✦</div>
+            <div class="msg-bubble">
+              <p>The psalms of lament form the largest category in the Psalter — David did not shy from grief. Psalm 22 opens with the cry of desolation that Jesus himself echoed from the cross. Psalm 88 is the darkest, ending without resolution. Psalm 34:18 promises <em>the Lord is near to the brokenhearted.</em> Begin there.</p>
+              <span class="verse-ref">
+                Psalms 22, 34, 88 — On Lament
+                <span class="verse-cite">Psalter · Book of Psalms</span>
+              </span>
+            </div>
+          </div>
+          <span class="msg-time">9:02 AM</span>
+        </div>
+
+      </div><!-- end .chat-messages -->
+
+      <!-- INPUT -->
+      <div class="input-zone">
+        <div class="input-row">
+          <input class="chat-input" type="text" placeholder="Ask about a psalm, a verse, or seek understanding…" id="chatInput" />
+          <button class="send-btn" id="sendBtn" aria-label="Send">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+            </svg>
+          </button>
+        </div>
+        <div class="hint-chips">
+          <div class="hint-chip">Psalms for anxiety</div>
+          <div class="hint-chip">What is selah?</div>
+          <div class="hint-chip">Psalm 23 in depth</div>
+          <div class="hint-chip">Psalms of ascent</div>
+        </div>
+      </div>
+
+      <!-- Sacred Night footer -->
+      <div class="footer-note">meditatio · lectio · oratio</div>
+
+    </div><!-- end .main-col -->
+
+  </div><!-- end .chat-shell -->
+</div><!-- end .page -->
+
+<script>
+  const themes = ['manuscript', 'sacred-night', 'editorial'];
+  const html = document.documentElement;
+  const buttons = document.querySelectorAll('.switcher-btn');
+  const overlay = document.getElementById('overlay');
+
+  function switchTheme(theme) {
+    overlay.classList.add('flash');
+    setTimeout(() => overlay.classList.remove('flash'), 250);
+
+    html.setAttribute('data-theme', theme);
+
+    buttons.forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.theme === theme);
+    });
+  }
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => switchTheme(btn.dataset.theme));
+  });
+
+  // ── Sidebar toggle (all three themes) ──
+  const sidebar = document.querySelector('.sidebar');
+  const backdrop = document.getElementById('sidebarBackdrop');
+
+  // Map each hamburger button id to its theme
+  const hamburgerMap = {
+    hamburgerBtn: 'editorial',
+    hamburgerBtnManuscript: 'manuscript',
+    hamburgerBtnSacredNight: 'sacred-night'
+  };
+
+  function openSidebar() {
+    sidebar.classList.add('open');
+    backdrop.classList.add('visible');
+    // Mark the active theme's button as open
+    Object.keys(hamburgerMap).forEach(id => {
+      const btn = document.getElementById(id);
+      if (btn) btn.classList.toggle('open', hamburgerMap[id] === html.getAttribute('data-theme'));
+    });
+  }
+
+  function closeSidebar() {
+    sidebar.classList.remove('open');
+    backdrop.classList.remove('visible');
+    Object.keys(hamburgerMap).forEach(id => {
+      const btn = document.getElementById(id);
+      if (btn) btn.classList.remove('open');
+    });
+  }
+
+  function toggleSidebar() {
+    sidebar.classList.contains('open') ? closeSidebar() : openSidebar();
+  }
+
+  Object.keys(hamburgerMap).forEach(id => {
+    const btn = document.getElementById(id);
+    if (btn) btn.addEventListener('click', toggleSidebar);
+  });
+
+  backdrop.addEventListener('click', closeSidebar);
+
+  // Close sidebar when switching themes
+  buttons.forEach(btn => {
+    btn.addEventListener('click', closeSidebar);
+  });
+  document.querySelectorAll('.hint-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      document.getElementById('chatInput').value = chip.textContent;
+      document.getElementById('chatInput').focus();
+    });
+  });
+
+  // Send message (append a demo message)
+  const input = document.getElementById('chatInput');
+  const sendBtn = document.getElementById('sendBtn');
+  const messagesEl = document.getElementById('messages');
+
+  function sendMessage() {
+    const val = input.value.trim();
+    if (!val) return;
+
+    const theme = html.getAttribute('data-theme');
+    const now = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+    // User message
+    const userMsg = document.createElement('div');
+    userMsg.className = 'msg msg-user';
+    userMsg.innerHTML = `
+      <div class="msg-label">You</div>
+      <div class="msg-row">
+        <div class="avatar avatar-user">Me</div>
+        <div class="msg-bubble"><p>${escHtml(val)}</p></div>
+      </div>
+      <span class="msg-time">${now}</span>
+    `;
+    messagesEl.appendChild(userMsg);
+    messagesEl.scrollTop = messagesEl.scrollHeight;
+    input.value = '';
+
+    // Bot response (simulated)
+    setTimeout(() => {
+      const botMsg = document.createElement('div');
+      botMsg.className = 'msg msg-bot';
+      botMsg.innerHTML = `
+        <div class="msg-label">Scripture</div>
+        <div class="msg-row">
+          <div class="avatar avatar-bot">✦</div>
+          <div class="msg-bubble">
+            <p>Seek and you shall find — the Psalms speak to every season of the soul. Consider Psalm 46: <em>"Be still, and know that I am God."</em></p>
+            <span class="verse-ref">Psalm 46:10 · KJV<span class="verse-cite">A Psalm of Refuge</span></span>
+          </div>
+        </div>
+        <span class="msg-time">${now}</span>
+      `;
+      messagesEl.appendChild(botMsg);
+      messagesEl.scrollTop = messagesEl.scrollHeight;
+    }, 750);
+  }
+
+  sendBtn.addEventListener('click', sendMessage);
+  input.addEventListener('keydown', e => { if (e.key === 'Enter') sendMessage(); });
+
+  function escHtml(str) {
+    return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+
+</script>
+</body>
+</html>
