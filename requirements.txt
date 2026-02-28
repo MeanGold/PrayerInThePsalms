@@ -3,3 +3,4 @@ azure-ai-inference
 azure-search-documents
 azure-core 
 python-dotenv
+vite
