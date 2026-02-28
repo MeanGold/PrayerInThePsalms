@@ -6,3 +6,4 @@ python-dotenv
 vite
 uvicorn
 fastapi
+lucide-react
