@@ -50,7 +50,7 @@ function App() {
   useEffect(() => {
     const welcomeMessage: Message = {
       id: 1,
-      text: "Welcome to Prayer in the Psalms. Share what's on your heart, and I'll guide you to psalms that speak to your moment.",
+      text: "Welcome to Prayer Companion. Share what's on your heart, and I'll guide you to psalms that speak to your moment.",
       sender: "bot",
       timestamp: new Date(),
     }
@@ -332,8 +332,8 @@ function App() {
                 {theme === 'editorial' ? (
                   <>
                     <div>
-                      <div className="header-title">Prayer Companion</div>
-                      <div className="header-sub">Ask anything about the Psalms</div>
+                      
+                      <div className="header-title"><BookOpen className="logo-mark" color="#b68a24ff"/> Prayer Companion</div>
                     </div>
                   </>
                 ) : (
@@ -478,12 +478,6 @@ function App() {
                     <p key={idx} className="psalm-verse">{verse}</p>
                   ))}
                 </div>
-
-                {selectedPsalm.historical_usage && (
-                  <div className="psalm-detail-usage">
-                    <strong>Historical Usage:</strong> {selectedPsalm.historical_usage}
-                  </div>
-                )}
               </div>
             </div>
           )}
