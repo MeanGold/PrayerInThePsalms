@@ -31,11 +31,11 @@ jobs:
 
       - name: copy build files to backend
         run: |
-          cp -r dist ../back-end/
+          cp -r front-end/dist back-end/
       
       - name: Install dependencies
         run: |
-          cd ../back-end
+          cd back-end/
           pip install -r requirements.txt
 
       - name: Upload artifact for deployment job
@@ -63,3 +63,4 @@ jobs:
           package: ./back-end
 
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C117408190B749BDB63484FEC46AA798 }}
+
