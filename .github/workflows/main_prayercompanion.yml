@@ -52,4 +52,4 @@ jobs:
           app-name: 'PrayerCompanion'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_4B0FDB35F89C45DB96831D2795811C3B }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C117408190B749BDB63484FEC46AA798 }}
