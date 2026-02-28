@@ -8,16 +8,19 @@ interface Message {
   timestamp: Date
 }
 
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000'
+
 function App() {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: 1,
-      text: "Welcome to Prayer in the Psalms! How can I help you today?",
+      text: "Welcome to Prayer in the Psalms! Share how you're feeling and I'll suggest psalms to pray through.",
       sender: 'bot',
       timestamp: new Date()
     }
   ])
   const [inputValue, setInputValue] = useState('')
+  const [isLoading, setIsLoading] = useState(false)         // NEW
   const messagesEndRef = useRef<HTMLDivElement>(null)
 
   const scrollToBottom = () => {
@@ -28,38 +31,70 @@ function App() {
     scrollToBottom()
   }, [messages])
 
-  const handleSendMessage = (e: React.FormEvent) => {
-    e.preventDefault()
-    
-    if (inputValue.trim() === '') return
+  const fetchRecommendation = async (userMessage: string): Promise<string> => {
+    const response = await fetch(`${API_URL}/recommend`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: userMessage })
+    })
 
-    // Add user message
+    if (!response.ok) {
+      throw new Error(`Server error: ${response.status}`)
+    }
+
+    const data = await response.json()
+    return data.recommendation
+  }
+
+  const handleSendMessage = async (e: React.FormEvent) => {
+    e.preventDefault()
+
+    if (inputValue.trim() === '' || isLoading) return
+
+    const userText = inputValue.trim()
+
     const userMessage: Message = {
       id: messages.length + 1,
-      text: inputValue,
+      text: userText,
       sender: 'user',
       timestamp: new Date()
     }
 
     setMessages(prev => [...prev, userMessage])
     setInputValue('')
+    setIsLoading(true)
 
-    // Simulate bot response
-    setTimeout(() => {
+    try {
+      const recommendation = await fetchRecommendation(userText)
+
       const botMessage: Message = {
         id: messages.length + 2,
-        text: "Thank you for your message. I'm here to help you explore the Psalms.",
+        text: recommendation,
         sender: 'bot',
         timestamp: new Date()
       }
+
       setMessages(prev => [...prev, botMessage])
-    }, 1000)
+
+    } catch (error) {
+      const errorMessage: Message = {
+        id: messages.length + 2,
+        text: "Something went wrong connecting to the server. Please try again.",
+        sender: 'bot',
+        timestamp: new Date()
+      }
+      setMessages(prev => [...prev, errorMessage])
+      console.error('Failed to fetch recommendation:', error)
+
+    } finally {
+      setIsLoading(false)
+    }
   }
 
   const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault()
-      handleSendMessage(e)
+      handleSendMessage(e as unknown as React.FormEvent)
     }
   }
 
@@ -84,6 +119,16 @@ function App() {
             </div>
           </div>
         ))}
+
+        {/* Loading indicator while waiting for the API */}
+        {isLoading && (
+          <div className="message message-bot">
+            <div className="message-content">
+              <p className="loading-dots">Finding psalms for you<span>.</span><span>.</span><span>.</span></p>
+            </div>
+          </div>
+        )}
+
         <div ref={messagesEndRef} />
       </div>
 
@@ -91,12 +136,17 @@ function App() {
         <input
           type="text"
           className="chat-input"
-          placeholder="Ask about a Psalm or share your prayer..."
+          placeholder="Share how you're feeling..."
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
           onKeyPress={handleKeyPress}
+          disabled={isLoading}
         />
-        <button type="submit" className="chat-send-button" disabled={inputValue.trim() === ''}>
+        <button
+          type="submit"
+          className="chat-send-button"
+          disabled={inputValue.trim() === '' || isLoading}
+        >
           <svg
             width="20"
             height="20"

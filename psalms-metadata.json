@@ -1,6 +1,6 @@
 [
   {
-    "psalm_id": "Psalm 1",
+    "psalm_id": "Psalm-1",
     "text": [
       "1 Blessed is the man who does not walk in the counsel of the wicked, nor stand in the way of sinners, nor sit in the seat of scoffers;",
       "2 but his delight is in the law of Yahweh, and on his law he meditates day and night.",
@@ -18,7 +18,7 @@
       "hope",
       "encouragement"
     ],
-    "historical_usage": "Often used in teachings about the contrast between the righteous and the wicked; opening psalm of the Psalter.",
+    "historical_usage": "Often used in teachings about the contrast between the righteous and the wicked; opening Psalm-of the Psalter.",
     "key_verses": [
       "1:1",
       "1:2",
@@ -26,7 +26,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 2",
+    "psalm_id": "Psalm-2",
     "text": [
       "1 Why do the nations rage, and the peoples imagine a vain thing?",
       "2 The kings of the earth take a stand, and the rulers take counsel together, against Yahweh, and against his Anointed, saying,",
@@ -57,7 +57,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 3",
+    "psalm_id": "Psalm-3",
     "text": [
       "1 Yahweh, how my adversaries have increased! Many are those who rise against me.",
       "2 Many say of my soul, “There is no help for him in God.” Selah.",
@@ -77,14 +77,14 @@
       "fear to faith",
       "confidence"
     ],
-    "historical_usage": "Psalm of David during danger; often recited for protection and trust in God.",
+    "historical_usage": "Psalm-of David during danger; often recited for protection and trust in God.",
     "key_verses": [
       "3:3",
       "3:8"
     ]
   },
   {
-    "psalm_id": "Psalm 4",
+    "psalm_id": "Psalm-4",
     "text": [
       "1 Answer me when I call, O God of my righteousness! You have relieved me in my distress; be merciful to me and hear my prayer.",
       "2 You sons of men, how long will you turn my glory to shame? How long will you love vanity, and seek falsehood? Selah.",
@@ -111,7 +111,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 5",
+    "psalm_id": "Psalm-5",
     "text": [
       "1 Give ear to my words, O Yahweh; consider my meditation.",
       "2 Hearken to the voice of my cry, my King and my God, for to you will I pray.",
@@ -135,14 +135,14 @@
       "plea",
       "trust"
     ],
-    "historical_usage": "Morning psalm of David; recited for guidance and protection from enemies.",
+    "historical_usage": "Morning Psalm-of David; recited for guidance and protection from enemies.",
     "key_verses": [
       "5:8",
       "5:12"
     ]
   },
   {
-    "psalm_id": "Psalm 6",
+    "psalm_id": "Psalm-6",
     "text": [
       "1 O Yahweh, rebuke me not in your anger, neither chasten me in your hot displeasure.",
       "2 Be merciful to me, O Yahweh, for I am weak; heal me, O Yahweh, for my bones are troubled.",
@@ -164,14 +164,14 @@
       "despair",
       "hope"
     ],
-    "historical_usage": "Psalm of lament; often recited during illness or times of deep distress.",
+    "historical_usage": "Psalm-of lament; often recited during illness or times of deep distress.",
     "key_verses": [
       "6:2",
       "6:9"
     ]
   },
   {
-    "psalm_id": "Psalm 7",
+    "psalm_id": "Psalm-7",
     "text": [
       "1 O Yahweh my God, in you I take refuge; save me from all who pursue me, and deliver me;",
       "2 Lest he tear my soul like a lion, rending it, while there is none to deliver.",
@@ -201,7 +201,7 @@
       "trust",
       "confidence"
     ],
-    "historical_usage": "Psalm of David appealing for justice against enemies; used in prayers for protection.",
+    "historical_usage": "Psalm-of David appealing for justice against enemies; used in prayers for protection.",
     "key_verses": [
       "7:1",
       "7:10",
@@ -209,7 +209,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 8",
+    "psalm_id": "Psalm-8",
     "text": [
       "1 O Yahweh our Lord, how excellent is your name in all the earth! Who have set your glory above the heavens.",
       "2 Out of the mouth of babes and sucklings you have ordained strength, because of your enemies, that you might silence the enemy and the avenger.",
@@ -239,7 +239,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 9",
+    "psalm_id": "Psalm-9",
     "text": [
       "1 I will praise you, O Yahweh, with all my heart; I will tell of all your marvelous works.",
       "2 I will be glad and rejoice in you; I will sing praise to your name, O Most High.",
@@ -264,7 +264,7 @@
       "confidence",
       "reliance"
     ],
-    "historical_usage": "Psalm of thanksgiving and praise after deliverance; used in worship.",
+    "historical_usage": "Psalm-of thanksgiving and praise after deliverance; used in worship.",
     "key_verses": [
       "9:1",
       "9:8",
@@ -272,7 +272,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 10",
+    "psalm_id": "Psalm-10",
     "text": [
       "1 Why do you stand afar off, O Yahweh? Why do you hide in times of trouble?",
       "2 The wicked in his pride persecutes the poor; let them be taken in the plots that they have imagined.",
@@ -298,14 +298,14 @@
       "frustration",
       "hope"
     ],
-    "historical_usage": "Imprecatory psalm pleading for God’s intervention against the proud and wicked.",
+    "historical_usage": "Imprecatory Psalm-pleading for God’s intervention against the proud and wicked.",
     "key_verses": [
       "10:12",
       "10:14"
     ]
   },
   {
-    "psalm_id": "Psalm 11",
+    "psalm_id": "Psalm-11",
     "text": [
       "1 In Yahweh I have taken refuge; how can you say to my soul, 'Flee as a bird to your mountain'?",
       "2 For, behold, the wicked bend their bow, they make ready their arrow on the string, that they may shoot secretly at the upright in heart.",
@@ -324,14 +324,14 @@
       "confidence",
       "reassurance"
     ],
-    "historical_usage": "Psalm of refuge for the faithful; emphasizes God’s omniscience and justice.",
+    "historical_usage": "Psalm-of refuge for the faithful; emphasizes God’s omniscience and justice.",
     "key_verses": [
       "11:1",
       "11:7"
     ]
   },
   {
-    "psalm_id": "Psalm 12",
+    "psalm_id": "Psalm-12",
     "text": [
       "1 Help, O Yahweh; for the godly man ceases; for the faithful fail from among the children of men.",
       "2 They speak lies every one with his neighbor; with flattering lips, and with a double heart, they speak.",
@@ -351,14 +351,14 @@
       "plea",
       "trust"
     ],
-    "historical_usage": "Psalm highlighting the preservation of godly people and the judgment of liars.",
+    "historical_usage": "Psalm-highlighting the preservation of godly people and the judgment of liars.",
     "key_verses": [
       "12:6",
       "12:7"
     ]
   },
   {
-    "psalm_id": "Psalm 13",
+    "psalm_id": "Psalm-13",
     "text": [
       "1 How long, O Yahweh? Will you forget me forever? How long will you hide your face from me?",
       "2 How long shall I take counsel in my soul, having sorrow in my heart all the day? How long shall my enemy be exalted over me?",
@@ -377,14 +377,14 @@
       "reassurance",
       "joy"
     ],
-    "historical_usage": "Psalm of lament; often read in times of prolonged suffering or feeling forsaken.",
+    "historical_usage": "Psalm-of lament; often read in times of prolonged suffering or feeling forsaken.",
     "key_verses": [
       "13:5",
       "13:6"
     ]
   },
   {
-    "psalm_id": "Psalm 14",
+    "psalm_id": "Psalm-14",
     "text": [
       "1 The fool has said in his heart, 'There is no God.' They are corrupt, they have done abominable works; there is none who does good.",
       "2 Yahweh looked down from heaven on the children of men, to see if there were any who understood, who sought after God.",
@@ -410,7 +410,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 15",
+    "psalm_id": "Psalm-15",
     "text": [
       "1 Yahweh, who shall dwell in your sanctuary? Who shall live on your holy hill?",
       "2 He who walks blamelessly, and does what is right, and speaks truth in his heart;",
@@ -435,7 +435,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 16",
+    "psalm_id": "Psalm-16",
     "text": [
       "1 Preserve me, God, for I take refuge in you.",
       "2 I have said to Yahweh, 'You are my Lord. I have no good besides you.'",
@@ -468,7 +468,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 17",
+    "psalm_id": "Psalm-17",
     "text": [
       "1 Hear, Yahweh, my righteous plea. Give ear to my prayer, that doesn’t go out of hypocritical lips.",
       "2 Let my sentence come out from your presence. Let your eyes look on equity.",
@@ -503,7 +503,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 18",
+    "psalm_id": "Psalm-18",
     "text": [
       "1 I love you, Yahweh, my strength.",
       "2 Yahweh is my rock, my fortress, and my deliverer; my God, my rock, in whom I take refuge; my shield, and the horn of my salvation, my high tower.",
@@ -579,7 +579,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 19",
+    "psalm_id": "Psalm-19",
     "text": [
       "1 The heavens declare the glory of God. The expanse shows his handiwork.",
       "2 Day after day they pour out speech, and night after night they display knowledge.",
@@ -607,7 +607,7 @@
       "humility",
       "devotion"
     ],
-    "historical_usage": "A foundational wisdom psalm used to teach the harmony between nature and law.",
+    "historical_usage": "A foundational wisdom Psalm-used to teach the harmony between nature and law.",
     "key_verses": [
       "19:1",
       "19:7",
@@ -615,7 +615,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 20",
+    "psalm_id": "Psalm-20",
     "text": [
       "1 May Yahweh answer you in the day of trouble. May the name of the God of Jacob set you up on high,",
       "2 send you help from the sanctuary, grant you support from Zion,",
@@ -638,7 +638,7 @@
       "anticipation",
       "unity"
     ],
-    "historical_usage": "A royal psalm used as a communal prayer for the king's success in battle.",
+    "historical_usage": "A royal Psalm-used as a communal prayer for the king's success in battle.",
     "key_verses": [
       "20:1",
       "20:4",
@@ -646,7 +646,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 21",
+    "psalm_id": "Psalm-21",
     "text": [
       "1 The king triumphs in your strength, Yahweh! How greatly he rejoices in your salvation!",
       "2 You have given him his heart’s desire, and have not withheld the request of his lips. Selah.",
@@ -673,7 +673,7 @@
       "gratitude",
       "triumph"
     ],
-    "historical_usage": "A counterpart to Psalm 20; a thanksgiving after a military victory.",
+    "historical_usage": "A counterpart to Psalm-20; a thanksgiving after a military victory.",
     "key_verses": [
       "21:1",
       "21:7",
@@ -681,7 +681,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 22",
+    "psalm_id": "Psalm-22",
     "text": [
       "1 My God, my God, why have you forsaken me? Why are you so far from helping me, and from the words of my groaning?",
       "2 My God, I cry in the daytime, but you don’t answer; in the night season, and am not silent.",
@@ -736,7 +736,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 23",
+    "psalm_id": "Psalm-23",
     "text": [
       "1 Yahweh is my shepherd: I shall lack nothing.",
       "2 He makes me lie down in green pastures. He leads me beside still waters.",
@@ -764,7 +764,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 24",
+    "psalm_id": "Psalm-24",
     "text": [
       "1 The earth is Yahweh’s, with its fullness; the world, and those who dwell therein.",
       "2 For he has founded it on the seas, and established it on the floods.",
@@ -788,7 +788,7 @@
       "exaltation",
       "solemnity"
     ],
-    "historical_usage": "Processional psalm used when bringing the Ark of the Covenant into Jerusalem.",
+    "historical_usage": "Processional Psalm-used when bringing the Ark of the Covenant into Jerusalem.",
     "key_verses": [
       "24:1",
       "24:4",
@@ -796,7 +796,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 25",
+    "psalm_id": "Psalm-25",
     "text": [
       "1 To you, Yahweh, I lift up my soul.",
       "2 My God, I have trusted in you. Don’t let me be shamed. Don’t let my enemies triumph over me.",
@@ -832,7 +832,7 @@
       "vulnerability",
       "dependence"
     ],
-    "historical_usage": "An acrostic psalm (in Hebrew) often used in personal devotion for spiritual direction.",
+    "historical_usage": "An acrostic Psalm-(in Hebrew) often used in personal devotion for spiritual direction.",
     "key_verses": [
       "25:4",
       "25:10",
@@ -840,7 +840,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 26",
+    "psalm_id": "Psalm-26",
     "text": [
       "1 Judge me, Yahweh, for I have walked in my integrity. I have trusted also in Yahweh without wavering.",
       "2 Examine me, Yahweh, and prove me. Try my heart and my mind.",
@@ -873,7 +873,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 27",
+    "psalm_id": "Psalm-27",
     "text": [
       "1 Yahweh is my light and my salvation. Whom shall I fear? Yahweh is the strength of my life. Of whom shall I be afraid?",
       "2 When evildoers came at me to eat up my flesh, even my adversaries and my foes, they stumbled and fell.",
@@ -909,7 +909,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 28",
+    "psalm_id": "Psalm-28",
     "text": [
       "1 To you, Yahweh, I call. My rock, don’t be deaf to me; lest, if you are silent to me, I become like those who go down into the pit.",
       "2 Hear the voice of my petitions, when I cry to you, when I lift up my hands toward your Most Holy Place.",
@@ -940,7 +940,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 29",
+    "psalm_id": "Psalm-29",
     "text": [
       "1 Ascribe to Yahweh, you sons of the mighty, ascribe to Yahweh glory and strength.",
       "2 Ascribe to Yahweh the glory due to his name. Worship Yahweh in holy array.",
@@ -972,7 +972,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 30",
+    "psalm_id": "Psalm-30",
     "text": [
       "1 I will extol you, Yahweh, for you have raised me up, and have not made my foes to rejoice over me.",
       "2 Yahweh my God, I cried to you, and you have healed me.",
@@ -1006,7 +1006,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 31",
+    "psalm_id": "Psalm-31",
     "text": [
       "1 In you, Yahweh, I take refuge. Let me never be disappointed. Deliver me in your righteousness.",
       "2 Bow down your ear to me. Deliver me speedily. Be my strong rock, a house of defense to save me.",
@@ -1045,7 +1045,7 @@
       "confidence",
       "gratitude"
     ],
-    "historical_usage": "A psalm of lament and trust attributed to David, quoted by Jesus on the cross ('Into your hand I commend my spirit,' v. 5). Used in Jewish and Christian liturgy for times of suffering.",
+    "historical_usage": "A Psalm-of lament and trust attributed to David, quoted by Jesus on the cross ('Into your hand I commend my spirit,' v. 5). Used in Jewish and Christian liturgy for times of suffering.",
     "key_verses": [
       "31:5",
       "31:14",
@@ -1054,7 +1054,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 32",
+    "psalm_id": "Psalm-32",
     "text": [
       "1 Blessed is he whose disobedience is forgiven, whose sin is covered.",
       "2 Blessed is the man to whom Yahweh doesn't impute iniquity, in whose spirit there is no deceit.",
@@ -1088,7 +1088,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 33",
+    "psalm_id": "Psalm-33",
     "text": [
       "1 Rejoice in Yahweh, you righteous! Praise is fitting for the upright.",
       "2 Give thanks to Yahweh with the lyre. Sing praises to him with the harp of ten strings.",
@@ -1134,7 +1134,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 34",
+    "psalm_id": "Psalm-34",
     "text": [
       "1 I will bless Yahweh at all times. His praise will always be in my mouth.",
       "2 My soul shall boast in Yahweh. The humble shall hear of it and be glad.",
@@ -1171,7 +1171,7 @@
       "joy",
       "instruction"
     ],
-    "historical_usage": "An acrostic psalm attributed to David, written after he feigned madness before Abimelech. Widely used in Christian liturgy; verse 8 ('taste and see') is associated with the Eucharist.",
+    "historical_usage": "An acrostic Psalm-attributed to David, written after he feigned madness before Abimelech. Widely used in Christian liturgy; verse 8 ('taste and see') is associated with the Eucharist.",
     "key_verses": [
       "34:7",
       "34:8",
@@ -1180,7 +1180,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 35",
+    "psalm_id": "Psalm-35",
     "text": [
       "1 Contend, Yahweh, with those who contend with me. Fight against those who fight against me.",
       "2 Take hold of shield and buckler, and stand up for my help.",
@@ -1224,7 +1224,7 @@
       "hope",
       "righteous anger"
     ],
-    "historical_usage": "A lament and imprecatory psalm attributed to David, expressing the pain of betrayal by enemies. Debated in Christian ethics for its calls for divine judgment.",
+    "historical_usage": "A lament and imprecatory Psalm-attributed to David, expressing the pain of betrayal by enemies. Debated in Christian ethics for its calls for divine judgment.",
     "key_verses": [
       "35:3",
       "35:9",
@@ -1233,7 +1233,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 36",
+    "psalm_id": "Psalm-36",
     "text": [
       "1 An oracle is within my heart about the disobedience of the wicked: 'There is no fear of God before his eyes.'",
       "2 For he flatters himself in his own eyes, too much to detect and hate his sin.",
@@ -1260,7 +1260,7 @@
       "awe",
       "security"
     ],
-    "historical_usage": "A wisdom psalm contrasting the wicked with the goodness of God. Verse 9 ('In your light we will see light') is inscribed on buildings at many universities and is central to Christian theology.",
+    "historical_usage": "A wisdom Psalm-contrasting the wicked with the goodness of God. Verse 9 ('In your light we will see light') is inscribed on buildings at many universities and is central to Christian theology.",
     "key_verses": [
       "36:5",
       "36:7",
@@ -1268,7 +1268,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 37",
+    "psalm_id": "Psalm-37",
     "text": [
       "1 Don't fret because of evildoers, neither be envious against those who work unrighteousness.",
       "2 For they shall soon be cut down like the grass, and wither like the green herb.",
@@ -1323,7 +1323,7 @@
       "reassurance",
       "instruction"
     ],
-    "historical_usage": "A lengthy acrostic wisdom psalm attributed to David, comparing the fates of the righteous and wicked. Verse 11 ('the humble shall inherit the land') is echoed in Jesus's Beatitudes (Matthew 5:5).",
+    "historical_usage": "A lengthy acrostic wisdom Psalm-attributed to David, comparing the fates of the righteous and wicked. Verse 11 ('the humble shall inherit the land') is echoed in Jesus's Beatitudes (Matthew 5:5).",
     "key_verses": [
       "37:4",
       "37:5",
@@ -1334,7 +1334,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 38",
+    "psalm_id": "Psalm-38",
     "text": [
       "1 Yahweh, don't rebuke me in your wrath. Don't chasten me in your hot displeasure.",
       "2 For your arrows have pierced me, and your hand presses hard on me.",
@@ -1382,7 +1382,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 39",
+    "psalm_id": "Psalm-39",
     "text": [
       "1 I said, 'I will watch my ways, so that I don't sin with my tongue. I will keep my mouth with a bridle while the wicked is before me.'",
       "2 I was mute with silence. I held my peace, even from good. My sorrow was stirred.",
@@ -1420,7 +1420,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 40",
+    "psalm_id": "Psalm-40",
     "text": [
       "1 I waited patiently for Yahweh. He turned to me, and heard my cry.",
       "2 He brought me up also out of a horrible pit, out of the miry clay. He set my feet on a rock, and gave me a firm place to stand.",
@@ -1453,7 +1453,7 @@
       "urgency",
       "humility"
     ],
-    "historical_usage": "A psalm of thanksgiving turning to lament, attributed to David. Verses 6-8 are quoted in Hebrews 10:5-7 as a messianic prophecy fulfilled by Christ's sacrifice. Verse 2 ('out of the miry clay') is widely quoted in devotional literature.",
+    "historical_usage": "A Psalm-of thanksgiving turning to lament, attributed to David. Verses 6-8 are quoted in Hebrews 10:5-7 as a messianic prophecy fulfilled by Christ's sacrifice. Verse 2 ('out of the miry clay') is widely quoted in devotional literature.",
     "key_verses": [
       "40:1",
       "40:2",
@@ -1463,7 +1463,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 41",
+    "psalm_id": "Psalm-41",
     "text": [
       "1 Blessed is he who considers the poor. Yahweh will deliver him in the day of evil.",
       "2 Yahweh will preserve him, and keep him alive. He shall be blessed on the earth, and he will not surrender him to the will of his enemies.",
@@ -1490,7 +1490,7 @@
       "trust",
       "hope"
     ],
-    "historical_usage": "A psalm of David during illness and betrayal. Verse 9 is quoted by Jesus in John 13:18 regarding Judas's betrayal. Verse 13 closes Book I of the Psalter with a doxology.",
+    "historical_usage": "A Psalm-of David during illness and betrayal. Verse 9 is quoted by Jesus in John 13:18 regarding Judas's betrayal. Verse 13 closes Book I of the Psalter with a doxology.",
     "key_verses": [
       "41:1",
       "41:9",
@@ -1498,7 +1498,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 42",
+    "psalm_id": "Psalm-42",
     "text": [
       "1 As the deer pants for the water brooks, so my soul pants after you, God.",
       "2 My soul thirsts for God, for the living God. When shall I come and appear before God?",
@@ -1533,7 +1533,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 43",
+    "psalm_id": "Psalm-43",
     "text": [
       "1 Vindicate me, God, and plead my cause against an ungodly nation. Oh, deliver me from deceitful and wicked men.",
       "2 For you are the God of my strength. Why have you rejected me? Why do I go mourning because of the oppression of the enemy?",
@@ -1552,7 +1552,7 @@
       "longing",
       "confidence"
     ],
-    "historical_usage": "Often considered a continuation of Psalm 42. The refrain 'Why are you in despair, my soul?' appears in both. Verse 3 ('send out your light and your truth') is widely used in prayers for guidance.",
+    "historical_usage": "Often considered a continuation of Psalm-42. The refrain 'Why are you in despair, my soul?' appears in both. Verse 3 ('send out your light and your truth') is widely used in prayers for guidance.",
     "key_verses": [
       "43:3",
       "43:4",
@@ -1560,7 +1560,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 44",
+    "psalm_id": "Psalm-44",
     "text": [
       "1 We have heard with our ears, God; our fathers have told us what work you did in their days, in the days of old.",
       "2 You drove out the nations with your hand, but you planted them. You afflicted the peoples, but you spread them abroad.",
@@ -1610,7 +1610,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 45",
+    "psalm_id": "Psalm-45",
     "text": [
       "1 My heart overflows with a noble theme. I recite my verses for the king. My tongue is like the pen of a skillful writer.",
       "2 You are the most excellent of the sons of men. Grace has anointed your lips, therefore God has blessed you forever.",
@@ -1650,7 +1650,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 46",
+    "psalm_id": "Psalm-46",
     "text": [
       "1 God is our refuge and strength, a very present help in trouble.",
       "2 Therefore we won't be afraid, though the earth changes, though the mountains are shaken into the heart of the seas;",
@@ -1683,7 +1683,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 47",
+    "psalm_id": "Psalm-47",
     "text": [
       "1 Oh clap your hands, all you nations! Shout to God with the sound of triumph!",
       "2 For Yahweh Most High is awesome. He is a great King over all the earth.",
@@ -1705,7 +1705,7 @@
       "celebration",
       "triumph"
     ],
-    "historical_usage": "A psalm of the sons of Korah. Used in Jewish tradition for Rosh Hashanah. Celebrates God's universal sovereignty.",
+    "historical_usage": "A Psalm-of the sons of Korah. Used in Jewish tradition for Rosh Hashanah. Celebrates God's universal sovereignty.",
     "key_verses": [
       "47:1",
       "47:2",
@@ -1714,7 +1714,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 48",
+    "psalm_id": "Psalm-48",
     "text": [
       "1 Great is Yahweh, and greatly to be praised, in the city of our God, in his holy mountain.",
       "2 Beautiful in elevation, the joy of the whole earth, is Mount Zion, on the north sides, the city of the great King.",
@@ -1742,7 +1742,7 @@
       "security",
       "wonder"
     ],
-    "historical_usage": "A song and psalm of the sons of Korah. A Zion hymn celebrating Jerusalem as God's dwelling place. Verse 14 is often used in funeral liturgies.",
+    "historical_usage": "A song and Psalm-of the sons of Korah. A Zion hymn celebrating Jerusalem as God's dwelling place. Verse 14 is often used in funeral liturgies.",
     "key_verses": [
       "48:1",
       "48:8",
@@ -1750,7 +1750,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 49",
+    "psalm_id": "Psalm-49",
     "text": [
       "1 Hear this, all you peoples. Listen, all you inhabitants of the world,",
       "2 both low and high, rich and poor together.",
@@ -1784,7 +1784,7 @@
       "reflective",
       "hope"
     ],
-    "historical_usage": "A psalm of the sons of Korah. A wisdom psalm on the futility of trusting in wealth. Verse 15 offers hope of redemption from death.",
+    "historical_usage": "A Psalm-of the sons of Korah. A wisdom Psalm-on the futility of trusting in wealth. Verse 15 offers hope of redemption from death.",
     "key_verses": [
       "49:7-8",
       "49:12",
@@ -1793,7 +1793,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 50",
+    "psalm_id": "Psalm-50",
     "text": [
       "1 The Mighty One, God, Yahweh, speaks, and calls the earth from sunrise to sunset.",
       "2 Out of Zion, the perfection of beauty, God shines out.",
@@ -1830,7 +1830,7 @@
       "convicting",
       "instructive"
     ],
-    "historical_usage": "A psalm of Asaph. A covenant lawsuit where God calls His people to account. Emphasizes that God desires obedience and thanksgiving over ritual sacrifice.",
+    "historical_usage": "A Psalm-of Asaph. A covenant lawsuit where God calls His people to account. Emphasizes that God desires obedience and thanksgiving over ritual sacrifice.",
     "key_verses": [
       "50:10",
       "50:14",
@@ -1839,7 +1839,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 51",
+    "psalm_id": "Psalm-51",
     "text": [
       "1 Have mercy on me, God, according to your loving kindness. According to the multitude of your tender mercies, blot out my transgressions.",
       "2 Wash me thoroughly from my iniquity. Cleanse me from my sin.",
@@ -1881,7 +1881,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 52",
+    "psalm_id": "Psalm-52",
     "text": [
       "1 Why do you boast of mischief, mighty man? God's loving kindness endures continually.",
       "2 Your tongue plots destruction, like a sharp razor, working deceitfully.",
@@ -1909,7 +1909,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 53",
+    "psalm_id": "Psalm-53",
     "text": [
       "1 The fool has said in his heart, 'There is no God.' They are corrupt, and have done abominable iniquity. There is no one who does good.",
       "2 God looks down from heaven on the children of men, to see if there are any who understood, who seek after God.",
@@ -1927,7 +1927,7 @@
       "lament",
       "hope"
     ],
-    "historical_usage": "A maskil of David. Nearly identical to Psalm 14, emphasizing universal human sinfulness. Quoted by Paul in Romans 3:10-12.",
+    "historical_usage": "A maskil of David. Nearly identical to Psalm-14, emphasizing universal human sinfulness. Quoted by Paul in Romans 3:10-12.",
     "key_verses": [
       "53:1",
       "53:2",
@@ -1935,7 +1935,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 54",
+    "psalm_id": "Psalm-54",
     "text": [
       "1 Save me, God, by your name. Vindicate me in your might.",
       "2 Hear my prayer, God. Listen to the words of my mouth.",
@@ -1962,7 +1962,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 55",
+    "psalm_id": "Psalm-55",
     "text": [
       "1 Listen to my prayer, God. Don't hide yourself from my supplication.",
       "2 Attend to me, and answer me. I am restless in my complaint, and moan,",
@@ -2007,7 +2007,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 56",
+    "psalm_id": "Psalm-56",
     "text": [
       "1 Be merciful to me, God, for man wants to swallow me up. All day long, he attacks and oppresses me.",
       "2 My enemies want to swallow me up all day long, for they are many who fight proudly against me.",
@@ -2043,7 +2043,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 57",
+    "psalm_id": "Psalm-57",
     "text": [
       "1 Be merciful to me, God, be merciful to me, for my soul takes refuge in you. Yes, in the shadow of your wings, I will take refuge, until disaster has passed.",
       "2 I cry out to God Most High, to God who accomplishes my requests for me.",
@@ -2076,7 +2076,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 58",
+    "psalm_id": "Psalm-58",
     "text": [
       "1 Do you indeed speak righteousness, silent ones? Do you judge blamelessly, you sons of men?",
       "2 No, in your heart you plot injustice. You measure out the violence of your hands in the earth.",
@@ -2099,14 +2099,14 @@
       "indignation",
       "vindication"
     ],
-    "historical_usage": "A michtam of David. An imprecatory psalm calling for God's judgment on corrupt rulers.",
+    "historical_usage": "A michtam of David. An imprecatory Psalm-calling for God's judgment on corrupt rulers.",
     "key_verses": [
       "58:1",
       "58:11"
     ]
   },
   {
-    "psalm_id": "Psalm 59",
+    "psalm_id": "Psalm-59",
     "text": [
       "1 Deliver me from my enemies, my God. Set me on high from those who rise up against me.",
       "2 Deliver me from the workers of iniquity. Save me from the bloodthirsty men.",
@@ -2145,7 +2145,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 60",
+    "psalm_id": "Psalm-60",
     "text": [
       "1 God, you have rejected us. You have broken us down. You have been angry. Restore us, again.",
       "2 You have made the land tremble. You have torn it. Mend its fractures, for it quakes.",
@@ -2179,7 +2179,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 61",
+    "psalm_id": "Psalm-61",
     "text": [
       "1 Hear my cry, God. Listen to my prayer.",
       "2 From the end of the earth, I will call to you, when my heart is overwhelmed. Lead me to the rock that is higher than I.",
@@ -2201,7 +2201,7 @@
       "security",
       "devotion"
     ],
-    "historical_usage": "A psalm of David. Verse 2 ('Lead me to the rock that is higher than I') is a beloved expression of seeking God's strength.",
+    "historical_usage": "A Psalm-of David. Verse 2 ('Lead me to the rock that is higher than I') is a beloved expression of seeking God's strength.",
     "key_verses": [
       "61:2",
       "61:3",
@@ -2209,7 +2209,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 62",
+    "psalm_id": "Psalm-62",
     "text": [
       "1 My soul rests in God alone. My salvation is from him.",
       "2 He alone is my rock and my salvation, my fortress— I will never be greatly shaken.",
@@ -2235,7 +2235,7 @@
       "confidence",
       "peace"
     ],
-    "historical_usage": "A psalm of David. The refrain 'My soul rests in God alone' emphasizes complete dependence on God. Widely used in contemplative prayer.",
+    "historical_usage": "A Psalm-of David. The refrain 'My soul rests in God alone' emphasizes complete dependence on God. Widely used in contemplative prayer.",
     "key_verses": [
       "62:1",
       "62:5",
@@ -2244,7 +2244,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 63",
+    "psalm_id": "Psalm-63",
     "text": [
       "1 God, you are my God. I will earnestly seek you. My soul thirsts for you. My flesh longs for you, in a dry and weary land, where there is no water.",
       "2 So I have seen you in the sanctuary, watching your power and your glory.",
@@ -2269,7 +2269,7 @@
       "devotion",
       "joy"
     ],
-    "historical_usage": "A psalm of David when he was in the desert of Judah. Verse 1 ('My soul thirsts for you') is one of the most beloved expressions of spiritual longing.",
+    "historical_usage": "A Psalm-of David when he was in the desert of Judah. Verse 1 ('My soul thirsts for you') is one of the most beloved expressions of spiritual longing.",
     "key_verses": [
       "63:1",
       "63:3",
@@ -2277,7 +2277,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 64",
+    "psalm_id": "Psalm-64",
     "text": [
       "1 Hear my voice, God, in my complaint. Preserve my life from fear of the enemy.",
       "2 Hide me from the conspiracy of the wicked, from the noisy crowd of the ones doing evil;",
@@ -2301,7 +2301,7 @@
       "confidence",
       "relief"
     ],
-    "historical_usage": "A psalm of David. A prayer for protection from slanderers and conspirators.",
+    "historical_usage": "A Psalm-of David. A prayer for protection from slanderers and conspirators.",
     "key_verses": [
       "64:1",
       "64:7",
@@ -2309,7 +2309,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 65",
+    "psalm_id": "Psalm-65",
     "text": [
       "1 Praise waits for you, God, in Zion. To you shall vows be performed.",
       "2 You who hear prayer, to you all men will come.",
@@ -2336,7 +2336,7 @@
       "awe",
       "joy"
     ],
-    "historical_usage": "A psalm and song of David. A hymn of thanksgiving for God's provision and the abundance of harvest.",
+    "historical_usage": "A Psalm-and song of David. A hymn of thanksgiving for God's provision and the abundance of harvest.",
     "key_verses": [
       "65:2",
       "65:9",
@@ -2344,7 +2344,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 66",
+    "psalm_id": "Psalm-66",
     "text": [
       "1 Make a joyful shout to God, all the earth!",
       "2 Sing to the glory of his name! Offer glory and praise!",
@@ -2387,7 +2387,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 67",
+    "psalm_id": "Psalm-67",
     "text": [
       "1 May God be merciful to us, bless us, and cause his face to shine on us. Selah.",
       "2 That your way may be known on earth, and your salvation among all nations,",
@@ -2408,7 +2408,7 @@
       "hope",
       "celebration"
     ],
-    "historical_usage": "A psalm and song. A missionary psalm praying for God's blessing to extend to all nations. The refrain 'Let the peoples praise you' emphasizes universal worship.",
+    "historical_usage": "A Psalm-and song. A missionary Psalm-praying for God's blessing to extend to all nations. The refrain 'Let the peoples praise you' emphasizes universal worship.",
     "key_verses": [
       "67:1-2",
       "67:3",
@@ -2416,7 +2416,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 68",
+    "psalm_id": "Psalm-68",
     "text": [
       "1 Let God arise! Let his enemies be scattered! Let them who hate him also flee before him.",
       "2 As smoke is driven away, so drive them away. As wax melts before the fire, so let the wicked perish at the presence of God.",
@@ -2465,7 +2465,7 @@
       "awe",
       "celebration"
     ],
-    "historical_usage": "A psalm and song of David. A grand processional hymn celebrating God's victories. Verse 18 is quoted in Ephesians 4:8 regarding Christ's ascension.",
+    "historical_usage": "A Psalm-and song of David. A grand processional hymn celebrating God's victories. Verse 18 is quoted in Ephesians 4:8 regarding Christ's ascension.",
     "key_verses": [
       "68:1",
       "68:5",
@@ -2475,7 +2475,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 69",
+    "psalm_id": "Psalm-69",
     "text": [
       "1 Save me, God, for the waters have come up to my neck.",
       "2 I sink in deep mire, where there is no foothold. I have come into deep waters, where the floods overflow me.",
@@ -2526,7 +2526,7 @@
       "desperation",
       "hope"
     ],
-    "historical_usage": "A psalm of David. One of the most quoted psalms in the New Testament, applied to Christ's passion. Verse 9 is quoted in John 2:17 and Romans 15:3; verse 21 in Matthew 27:34, 48.",
+    "historical_usage": "A Psalm-of David. One of the most quoted psalms in the New Testament, applied to Christ's passion. Verse 9 is quoted in John 2:17 and Romans 15:3; verse 21 in Matthew 27:34, 48.",
     "key_verses": [
       "69:1",
       "69:9",
@@ -2535,7 +2535,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 70",
+    "psalm_id": "Psalm-70",
     "text": [
       "1 Hurry, God, to deliver me. Come quickly to help me, Yahweh.",
       "2 Let them be disappointed and confounded who seek my soul. Let those who desire my ruin be turned back in disgrace.",
@@ -2553,7 +2553,7 @@
       "desperation",
       "hope"
     ],
-    "historical_usage": "A psalm of David, to bring to memory. Nearly identical to Psalm 40:13-17. A brief, urgent prayer for help.",
+    "historical_usage": "A Psalm-of David, to bring to memory. Nearly identical to Psalm-40:13-17. A brief, urgent prayer for help.",
     "key_verses": [
       "70:1",
       "70:4",
@@ -2561,7 +2561,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 71",
+    "psalm_id": "Psalm-71",
     "text": [
       "1 In you, Yahweh, I take refuge. Never let me be disappointed.",
       "2 Deliver me in your righteousness, and rescue me. Turn your ear to me, and save me.",
@@ -2607,7 +2607,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 72",
+    "psalm_id": "Psalm-72",
     "text": [
       "1 God, give the king your justice; your righteousness to the royal son.",
       "2 He will judge your people with righteousness, and your poor with justice.",
@@ -2641,7 +2641,7 @@
       "anticipation",
       "praise"
     ],
-    "historical_usage": "A psalm by Solomon. A royal psalm praying for the king's righteous reign. Interpreted messianically as describing Christ's kingdom. Verse 20 marks the end of Book II of the Psalter.",
+    "historical_usage": "A Psalm-by Solomon. A royal Psalm-praying for the king's righteous reign. Interpreted messianically as describing Christ's kingdom. Verse 20 marks the end of Book II of the Psalter.",
     "key_verses": [
       "72:1",
       "72:8",
@@ -2651,7 +2651,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 73",
+    "psalm_id": "Psalm-73",
     "text": [
       "1 Surely God is good to Israel, to those who are pure in heart.",
       "2 But as for me, my feet were almost gone. My steps had nearly slipped.",
@@ -2694,7 +2694,7 @@
       "resolution",
       "peace"
     ],
-    "historical_usage": "A psalm of Asaph. A wisdom psalm wrestling with the prosperity of the wicked. Verse 25 ('Whom do I have in heaven?') is a beloved expression of devotion.",
+    "historical_usage": "A Psalm-of Asaph. A wisdom Psalm-wrestling with the prosperity of the wicked. Verse 25 ('Whom do I have in heaven?') is a beloved expression of devotion.",
     "key_verses": [
       "73:1",
       "73:17",
@@ -2703,7 +2703,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 74",
+    "psalm_id": "Psalm-74",
     "text": [
       "1 God, why have you rejected us forever? Why does your anger smolder against the sheep of your pasture?",
       "2 Remember your congregation, which you purchased of old, which you have redeemed to be the tribe of your inheritance; Mount Zion, in which you have lived.",
@@ -2747,7 +2747,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 75",
+    "psalm_id": "Psalm-75",
     "text": [
       "1 We give thanks to you, God. We give thanks, for your Name is near. Men tell about your wondrous works.",
       "2 When I choose the appointed time, I will judge blamelessly.",
@@ -2770,7 +2770,7 @@
       "warning",
       "confidence"
     ],
-    "historical_usage": "A psalm of Asaph. A song of thanksgiving celebrating God as the righteous judge.",
+    "historical_usage": "A Psalm-of Asaph. A song of thanksgiving celebrating God as the righteous judge.",
     "key_verses": [
       "75:1",
       "75:7",
@@ -2778,7 +2778,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 76",
+    "psalm_id": "Psalm-76",
     "text": [
       "1 In Judah, God is known. His name is great in Israel.",
       "2 His tabernacle is also in Salem; His dwelling place in Zion.",
@@ -2803,7 +2803,7 @@
       "reverence",
       "triumph"
     ],
-    "historical_usage": "A psalm of Asaph. Celebrates God's victory over enemies, possibly commemorating deliverance from Assyria.",
+    "historical_usage": "A Psalm-of Asaph. Celebrates God's victory over enemies, possibly commemorating deliverance from Assyria.",
     "key_verses": [
       "76:1",
       "76:7",
@@ -2811,7 +2811,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 77",
+    "psalm_id": "Psalm-77",
     "text": [
       "1 My cry goes to God! Indeed, I cry to God for help, and for him to listen to me.",
       "2 In the day of my trouble I sought the Lord. My hand was stretched out in the night, and didn't get tired. My soul refused to be comforted.",
@@ -2845,7 +2845,7 @@
       "questioning",
       "hope"
     ],
-    "historical_usage": "A psalm of Asaph. A lament that transitions to remembering God's past faithfulness, especially the Exodus.",
+    "historical_usage": "A Psalm-of Asaph. A lament that transitions to remembering God's past faithfulness, especially the Exodus.",
     "key_verses": [
       "77:11-12",
       "77:13",
@@ -2853,7 +2853,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 78",
+    "psalm_id": "Psalm-78",
     "text": [
       "1 Hear my teaching, my people. Turn your ears to the words of my mouth.",
       "2 I will open my mouth in a parable. I will utter dark sayings of old,",
@@ -2876,7 +2876,7 @@
       "warning",
       "reflective"
     ],
-    "historical_usage": "A maskil of Asaph. A lengthy historical psalm recounting Israel's history from Egypt to David, emphasizing God's faithfulness despite Israel's rebellion.",
+    "historical_usage": "A maskil of Asaph. A lengthy historical Psalm-recounting Israel's history from Egypt to David, emphasizing God's faithfulness despite Israel's rebellion.",
     "key_verses": [
       "78:4",
       "78:7-8",
@@ -2884,7 +2884,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 79",
+    "psalm_id": "Psalm-79",
     "text": [
       "1 God, the nations have come into your inheritance. They have defiled your holy temple. They have laid Jerusalem in heaps.",
       "2 They have given the dead bodies of your servants to be food for the birds of the sky, the flesh of your saints to the animals of the earth.",
@@ -2911,14 +2911,14 @@
       "anger",
       "desperation"
     ],
-    "historical_usage": "A psalm of Asaph. A communal lament over the destruction of Jerusalem, likely after the Babylonian conquest.",
+    "historical_usage": "A Psalm-of Asaph. A communal lament over the destruction of Jerusalem, likely after the Babylonian conquest.",
     "key_verses": [
       "79:9",
       "79:13"
     ]
   },
   {
-    "psalm_id": "Psalm 80",
+    "psalm_id": "Psalm-80",
     "text": [
       "1 Hear us, Shepherd of Israel, you who lead Joseph like a flock, you who sit above the cherubim, shine out.",
       "2 Before Ephraim and Benjamin and Manasseh, stir up your might! Come to save us!",
@@ -2950,7 +2950,7 @@
       "longing",
       "hope"
     ],
-    "historical_usage": "A psalm of Asaph. A prayer for national restoration using the metaphor of Israel as God's vine. The refrain 'Turn us again' emphasizes the plea for restoration.",
+    "historical_usage": "A Psalm-of Asaph. A prayer for national restoration using the metaphor of Israel as God's vine. The refrain 'Turn us again' emphasizes the plea for restoration.",
     "key_verses": [
       "80:3",
       "80:7",
@@ -2959,7 +2959,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 81",
+    "psalm_id": "Psalm-81",
     "text": [
       "1 Sing aloud to God, our strength! Make a joyful shout to the God of Jacob!",
       "2 Raise a song, and bring here the tambourine, the pleasant lyre with the harp.",
@@ -2989,7 +2989,7 @@
       "warning",
       "longing"
     ],
-    "historical_usage": "A psalm of Asaph. A festival psalm calling Israel to worship and remember God's covenant. Used during Jewish festivals.",
+    "historical_usage": "A Psalm-of Asaph. A festival Psalm-calling Israel to worship and remember God's covenant. Used during Jewish festivals.",
     "key_verses": [
       "81:1",
       "81:10",
@@ -2997,7 +2997,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 82",
+    "psalm_id": "Psalm-82",
     "text": [
       "1 God presides in the great assembly. He judges among the gods.",
       "2 'How long will you judge unjustly, and show partiality to the wicked?' Selah.",
@@ -3018,7 +3018,7 @@
       "indignation",
       "urgency"
     ],
-    "historical_usage": "A psalm of Asaph. A prophetic psalm calling earthly judges to account. Verse 6 is quoted by Jesus in John 10:34.",
+    "historical_usage": "A Psalm-of Asaph. A prophetic Psalm-calling earthly judges to account. Verse 6 is quoted by Jesus in John 10:34.",
     "key_verses": [
       "82:3-4",
       "82:6",
@@ -3026,7 +3026,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 83",
+    "psalm_id": "Psalm-83",
     "text": [
       "1 God, don't keep silent. Don't keep silent, and don't be still, God.",
       "2 For, behold, your enemies are stirred up. Those who hate you have lifted up their heads.",
@@ -3057,14 +3057,14 @@
       "plea",
       "confidence"
     ],
-    "historical_usage": "A song and psalm of Asaph. A prayer for deliverance from a coalition of enemies threatening Israel.",
+    "historical_usage": "A song and Psalm-of Asaph. A prayer for deliverance from a coalition of enemies threatening Israel.",
     "key_verses": [
       "83:1",
       "83:18"
     ]
   },
   {
-    "psalm_id": "Psalm 84",
+    "psalm_id": "Psalm-84",
     "text": [
       "1 How lovely are your dwellings, Yahweh of Armies!",
       "2 My soul longs, and even faints for the courts of Yahweh. My heart and my flesh cry out for the living God.",
@@ -3090,7 +3090,7 @@
       "joy",
       "devotion"
     ],
-    "historical_usage": "A psalm of the sons of Korah. One of the most beloved psalms expressing longing for God's house. Verse 10 is widely quoted.",
+    "historical_usage": "A Psalm-of the sons of Korah. One of the most beloved psalms expressing longing for God's house. Verse 10 is widely quoted.",
     "key_verses": [
       "84:1-2",
       "84:10",
@@ -3098,7 +3098,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 85",
+    "psalm_id": "Psalm-85",
     "text": [
       "1 Yahweh, you have been favorable to your land. You have restored the fortunes of Jacob.",
       "2 You have forgiven the iniquity of your people. You have covered all their sin. Selah.",
@@ -3125,7 +3125,7 @@
       "longing",
       "anticipation"
     ],
-    "historical_usage": "A psalm of the sons of Korah. A prayer for national restoration. Verse 10 is a beautiful poetic image of God's attributes in harmony.",
+    "historical_usage": "A Psalm-of the sons of Korah. A prayer for national restoration. Verse 10 is a beautiful poetic image of God's attributes in harmony.",
     "key_verses": [
       "85:6",
       "85:10",
@@ -3133,7 +3133,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 86",
+    "psalm_id": "Psalm-86",
     "text": [
       "1 Hear, Yahweh, and answer me, for I am poor and needy.",
       "2 Preserve my soul, for I am godly. You, my God, save your servant who trusts in you.",
@@ -3172,7 +3172,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 87",
+    "psalm_id": "Psalm-87",
     "text": [
       "1 His foundation is in the holy mountains.",
       "2 Yahweh loves the gates of Zion more than all the dwellings of Jacob.",
@@ -3192,7 +3192,7 @@
       "pride",
       "joy"
     ],
-    "historical_usage": "A psalm of the sons of Korah. A Zion hymn celebrating Jerusalem as the spiritual birthplace of all nations.",
+    "historical_usage": "A Psalm-of the sons of Korah. A Zion hymn celebrating Jerusalem as the spiritual birthplace of all nations.",
     "key_verses": [
       "87:3",
       "87:5",
@@ -3200,7 +3200,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 88",
+    "psalm_id": "Psalm-88",
     "text": [
       "1 Yahweh, the God of my salvation, I have cried day and night before you.",
       "2 Let my prayer enter into your presence. Turn your ear to my cry.",
@@ -3232,7 +3232,7 @@
       "hopelessness",
       "isolation"
     ],
-    "historical_usage": "A song and psalm of the sons of Korah, by Heman the Ezrahite. The darkest psalm in the Psalter, ending without resolution. Used in times of deep depression and suffering.",
+    "historical_usage": "A song and Psalm-of the sons of Korah, by Heman the Ezrahite. The darkest Psalm-in the Psalter, ending without resolution. Used in times of deep depression and suffering.",
     "key_verses": [
       "88:1",
       "88:13",
@@ -3240,7 +3240,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 89",
+    "psalm_id": "Psalm-89",
     "text": [
       "1 I will sing of the loving kindness of Yahweh forever. With my mouth, I will make known your faithfulness to all generations.",
       "2 I indeed declare, 'Love stands firm forever. You established the heavens. Your faithfulness is in them.'",
@@ -3317,7 +3317,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 90",
+    "psalm_id": "Psalm-90",
     "text": [
       "1 Lord, you have been our dwelling place for all generations.",
       "2 Before the mountains were born, before you had formed the earth and the world, even from everlasting to everlasting, you are God.",
@@ -3348,7 +3348,7 @@
       "reflective",
       "hopeful"
     ],
-    "historical_usage": "A prayer of Moses, the man of God. The oldest psalm in the Psalter. Verse 12 ('teach us to number our days') is widely quoted in reflections on mortality.",
+    "historical_usage": "A prayer of Moses, the man of God. The oldest Psalm-in the Psalter. Verse 12 ('teach us to number our days') is widely quoted in reflections on mortality.",
     "key_verses": [
       "90:1-2",
       "90:4",
@@ -3358,7 +3358,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 91",
+    "psalm_id": "Psalm-91",
     "text": [
       "1 He who dwells in the secret place of the Most High will rest in the shadow of the Almighty.",
       "2 I will say of Yahweh, 'He is my refuge and my fortress; my God, in whom I trust.'",
@@ -3397,7 +3397,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 92",
+    "psalm_id": "Psalm-92",
     "text": [
       "1 It is a good thing to give thanks to Yahweh, to sing praises to your name, Most High;",
       "2 to proclaim your loving kindness in the morning, and your faithfulness every night,",
@@ -3426,7 +3426,7 @@
       "gratitude",
       "confidence"
     ],
-    "historical_usage": "A psalm and song for the Sabbath day. Used in Jewish Sabbath liturgy. Celebrates God's works and the flourishing of the righteous.",
+    "historical_usage": "A Psalm-and song for the Sabbath day. Used in Jewish Sabbath liturgy. Celebrates God's works and the flourishing of the righteous.",
     "key_verses": [
       "92:1-2",
       "92:4-5",
@@ -3434,7 +3434,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 93",
+    "psalm_id": "Psalm-93",
     "text": [
       "1 Yahweh reigns! He is clothed with majesty! Yahweh is armed with strength. The world also is established. It can't be moved.",
       "2 Your throne is established from long ago. You are from everlasting.",
@@ -3461,7 +3461,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 94",
+    "psalm_id": "Psalm-94",
     "text": [
       "1 Yahweh, you God to whom vengeance belongs, you God to whom vengeance belongs, shine out.",
       "2 Rise up, you judge of the earth. Pay back the proud what they deserve.",
@@ -3498,7 +3498,7 @@
       "confidence",
       "comfort"
     ],
-    "historical_usage": "A psalm calling for God's justice against oppressors. Verse 9 is a classic argument for God's omniscience.",
+    "historical_usage": "A Psalm-calling for God's justice against oppressors. Verse 9 is a classic argument for God's omniscience.",
     "key_verses": [
       "94:1-2",
       "94:9",
@@ -3507,7 +3507,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 95",
+    "psalm_id": "Psalm-95",
     "text": [
       "1 Oh come, let's sing to Yahweh. Let's shout aloud to the rock of our salvation!",
       "2 Let's come before his presence with thanksgiving. Let's extol him with songs!",
@@ -3540,7 +3540,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 96",
+    "psalm_id": "Psalm-96",
     "text": [
       "1 Sing to Yahweh a new song! Sing to Yahweh, all the earth.",
       "2 Sing to Yahweh! Bless his name! Proclaim his salvation from day to day!",
@@ -3567,7 +3567,7 @@
       "celebration",
       "anticipation"
     ],
-    "historical_usage": "An enthronement psalm calling all creation to worship. Used in missionary contexts. Parallels 1 Chronicles 16:23-33.",
+    "historical_usage": "An enthronement Psalm-calling all creation to worship. Used in missionary contexts. Parallels 1 Chronicles 16:23-33.",
     "key_verses": [
       "96:1-3",
       "96:10",
@@ -3575,7 +3575,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 97",
+    "psalm_id": "Psalm-97",
     "text": [
       "1 Yahweh reigns! Let the earth rejoice! Let the multitude of islands be glad!",
       "2 Clouds and darkness are around him. Righteousness and justice are the foundation of his throne.",
@@ -3601,7 +3601,7 @@
       "joy",
       "reverence"
     ],
-    "historical_usage": "An enthronement psalm celebrating Yahweh's universal reign. Verse 7 is quoted in Hebrews 1:6 regarding angels worshiping Christ.",
+    "historical_usage": "An enthronement Psalm-celebrating Yahweh's universal reign. Verse 7 is quoted in Hebrews 1:6 regarding angels worshiping Christ.",
     "key_verses": [
       "97:1",
       "97:2",
@@ -3610,7 +3610,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 98",
+    "psalm_id": "Psalm-98",
     "text": [
       "1 Sing to Yahweh a new song, for he has done marvelous things! His right hand, and his holy arm, have worked salvation for him.",
       "2 Yahweh has made known his salvation. He has openly shown his righteousness in the sight of the nations.",
@@ -3633,7 +3633,7 @@
       "celebration",
       "exultation"
     ],
-    "historical_usage": "A psalm celebrating God's salvation. The basis for Isaac Watts' hymn 'Joy to the World.' Used in Christmas and Easter liturgies.",
+    "historical_usage": "A Psalm-celebrating God's salvation. The basis for Isaac Watts' hymn 'Joy to the World.' Used in Christmas and Easter liturgies.",
     "key_verses": [
       "98:1",
       "98:4",
@@ -3641,7 +3641,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 99",
+    "psalm_id": "Psalm-99",
     "text": [
       "1 Yahweh reigns! Let the peoples tremble. He sits enthroned among the cherubim. Let the earth be moved.",
       "2 Yahweh is great in Zion. He is high above all the peoples.",
@@ -3664,7 +3664,7 @@
       "awe",
       "exaltation"
     ],
-    "historical_usage": "An enthronement psalm emphasizing God's holiness. The refrain 'He is Holy!' appears three times.",
+    "historical_usage": "An enthronement Psalm-emphasizing God's holiness. The refrain 'He is Holy!' appears three times.",
     "key_verses": [
       "99:1",
       "99:3",
@@ -3673,7 +3673,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 100",
+    "psalm_id": "Psalm-100",
     "text": [
       "1 Shout for joy to Yahweh, all you lands!",
       "2 Serve Yahweh with gladness. Come before his presence with singing.",
@@ -3692,7 +3692,7 @@
       "gratitude",
       "celebration"
     ],
-    "historical_usage": "A psalm of thanksgiving. One of the most beloved psalms, often used in worship services. The basis for the hymn 'All People That on Earth Do Dwell.'",
+    "historical_usage": "A Psalm-of thanksgiving. One of the most beloved psalms, often used in worship services. The basis for the hymn 'All People That on Earth Do Dwell.'",
     "key_verses": [
       "100:1-2",
       "100:3",
@@ -3700,7 +3700,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 101",
+    "psalm_id": "Psalm-101",
     "text": [
       "1 I will sing of loving kindness and justice. To you, Yahweh, I will sing praises.",
       "2 I will be careful to live a blameless life. When will you come to me? I will walk within my house with a blameless heart.",
@@ -3722,7 +3722,7 @@
       "resolve",
       "conviction"
     ],
-    "historical_usage": "A psalm of David. A royal psalm outlining the king's commitment to righteous rule. Often used in discussions of leadership ethics.",
+    "historical_usage": "A Psalm-of David. A royal Psalm-outlining the king's commitment to righteous rule. Often used in discussions of leadership ethics.",
     "key_verses": [
       "101:2",
       "101:3",
@@ -3730,7 +3730,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 102",
+    "psalm_id": "Psalm-102",
     "text": [
       "1 Hear my prayer, Yahweh! Let my cry come to you.",
       "2 Don't hide your face from me in the day of my distress. Turn your ear to me. Answer me quickly in the day when I call.",
@@ -3780,7 +3780,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 103",
+    "psalm_id": "Psalm-103",
     "text": [
       "1 Praise Yahweh, my soul! All that is within me, praise his holy name!",
       "2 Praise Yahweh, my soul, and don't forget all his benefits;",
@@ -3816,7 +3816,7 @@
       "joy",
       "awe"
     ],
-    "historical_usage": "A psalm of David. One of the most beloved psalms celebrating God's mercy and forgiveness. Verse 12 is widely quoted regarding forgiveness.",
+    "historical_usage": "A Psalm-of David. One of the most beloved psalms celebrating God's mercy and forgiveness. Verse 12 is widely quoted regarding forgiveness.",
     "key_verses": [
       "103:1-5",
       "103:8",
@@ -3825,7 +3825,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 104",
+    "psalm_id": "Psalm-104",
     "text": [
       "1 Bless Yahweh, my soul. Yahweh, my God, you are very great. You are clothed with honor and majesty.",
       "2 He covers himself with light as with a garment. He stretches out the heavens like a curtain.",
@@ -3874,7 +3874,7 @@
       "awe",
       "gratitude"
     ],
-    "historical_usage": "A magnificent creation psalm celebrating God's works in nature. Similar in structure to the Egyptian Hymn to Aten. Verse 30 is associated with the Holy Spirit.",
+    "historical_usage": "A magnificent creation Psalm-celebrating God's works in nature. Similar in structure to the Egyptian Hymn to Aten. Verse 30 is associated with the Holy Spirit.",
     "key_verses": [
       "104:1",
       "104:24",
@@ -3883,7 +3883,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 105",
+    "psalm_id": "Psalm-105",
     "text": [
       "1 Give thanks to Yahweh! Call on his name! Make his doings known among the peoples.",
       "2 Sing to him, sing praises to him! Tell of all his marvelous works.",
@@ -3912,7 +3912,7 @@
       "confidence",
       "celebration"
     ],
-    "historical_usage": "A psalm recounting God's faithfulness from Abraham through the Exodus. Parallels 1 Chronicles 16:8-22. Used in worship to remember God's covenant.",
+    "historical_usage": "A Psalm-recounting God's faithfulness from Abraham through the Exodus. Parallels 1 Chronicles 16:8-22. Used in worship to remember God's covenant.",
     "key_verses": [
       "105:1-4",
       "105:8",
@@ -3920,7 +3920,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 106",
+    "psalm_id": "Psalm-106",
     "text": [
       "1 Praise Yahweh! Give thanks to Yahweh, for he is good, for his loving kindness endures forever.",
       "2 Who can utter the mighty acts of Yahweh, or fully declare all his praise?",
@@ -3949,7 +3949,7 @@
       "gratitude",
       "reflection"
     ],
-    "historical_usage": "A confession psalm recounting Israel's repeated rebellion and God's persistent mercy. Verse 48 closes Book IV of the Psalter.",
+    "historical_usage": "A confession Psalm-recounting Israel's repeated rebellion and God's persistent mercy. Verse 48 closes Book IV of the Psalter.",
     "key_verses": [
       "106:1",
       "106:6",
@@ -3958,7 +3958,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 107",
+    "psalm_id": "Psalm-107",
     "text": [
       "1 Give thanks to Yahweh, for he is good, for his loving kindness endures forever.",
       "2 Let the redeemed by Yahweh say so, whom he has redeemed from the hand of the adversary,",
@@ -3992,7 +3992,7 @@
       "relief",
       "celebration"
     ],
-    "historical_usage": "A thanksgiving psalm with a refrain celebrating God's deliverance in four scenarios. Opens Book V of the Psalter.",
+    "historical_usage": "A thanksgiving Psalm-with a refrain celebrating God's deliverance in four scenarios. Opens Book V of the Psalter.",
     "key_verses": [
       "107:1",
       "107:8",
@@ -4000,7 +4000,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 108",
+    "psalm_id": "Psalm-108",
     "text": [
       "1 My heart is steadfast, God. I will sing and I will make music with my soul.",
       "2 Wake up, harp and lyre! I will wake up the dawn.",
@@ -4027,14 +4027,14 @@
       "confidence",
       "hope"
     ],
-    "historical_usage": "A song and psalm of David. Combines portions of Psalms 57 and 60. A prayer for victory in battle.",
+    "historical_usage": "A song and Psalm-of David. Combines portions of Psalms 57 and 60. A prayer for victory in battle.",
     "key_verses": [
       "108:1",
       "108:12-13"
     ]
   },
   {
-    "psalm_id": "Psalm 109",
+    "psalm_id": "Psalm-109",
     "text": [
       "1 God of my praise, don't remain silent,",
       "2 for they have opened the mouth of the wicked and the mouth of deceit against me. They have spoken to me with a lying tongue.",
@@ -4068,7 +4068,7 @@
       "anger",
       "plea"
     ],
-    "historical_usage": "A psalm of David. The most severe imprecatory psalm. Verse 8 is quoted in Acts 1:20 regarding Judas's replacement.",
+    "historical_usage": "A Psalm-of David. The most severe imprecatory psalm. Verse 8 is quoted in Acts 1:20 regarding Judas's replacement.",
     "key_verses": [
       "109:4",
       "109:8",
@@ -4076,7 +4076,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 110",
+    "psalm_id": "Psalm-110",
     "text": [
       "1 Yahweh says to my Lord, 'Sit at my right hand, until I make your enemies your footstool for your feet.'",
       "2 Yahweh will send out the rod of your strength out of Zion. Rule among your enemies.",
@@ -4097,14 +4097,14 @@
       "authority",
       "confidence"
     ],
-    "historical_usage": "A psalm of David. The most quoted psalm in the New Testament. Verse 1 is applied to Christ's exaltation. Verse 4 establishes Christ's priesthood after Melchizedek's order (Hebrews 5-7).",
+    "historical_usage": "A Psalm-of David. The most quoted Psalm-in the New Testament. Verse 1 is applied to Christ's exaltation. Verse 4 establishes Christ's priesthood after Melchizedek's order (Hebrews 5-7).",
     "key_verses": [
       "110:1",
       "110:4"
     ]
   },
   {
-    "psalm_id": "Psalm 111",
+    "psalm_id": "Psalm-111",
     "text": [
       "1 Praise Yah! I will give thanks to Yahweh with my whole heart, in the council of the upright, and in the congregation.",
       "2 Yahweh's works are great, pondered by all those who delight in them.",
@@ -4128,7 +4128,7 @@
       "awe",
       "reverence"
     ],
-    "historical_usage": "An acrostic psalm (in Hebrew) praising God's works. Verse 10 is a key wisdom saying quoted in Proverbs 9:10.",
+    "historical_usage": "An acrostic Psalm-(in Hebrew) praising God's works. Verse 10 is a key wisdom saying quoted in Proverbs 9:10.",
     "key_verses": [
       "111:2",
       "111:4",
@@ -4136,7 +4136,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 112",
+    "psalm_id": "Psalm-112",
     "text": [
       "1 Praise Yah! Blessed is the man who fears Yahweh, who delights greatly in his commandments.",
       "2 His offspring will be mighty in the land. The generation of the upright will be blessed.",
@@ -4160,7 +4160,7 @@
       "security",
       "contentment"
     ],
-    "historical_usage": "An acrostic psalm (in Hebrew) describing the blessings of the righteous. Verse 9 is quoted in 2 Corinthians 9:9 regarding generosity.",
+    "historical_usage": "An acrostic Psalm-(in Hebrew) describing the blessings of the righteous. Verse 9 is quoted in 2 Corinthians 9:9 regarding generosity.",
     "key_verses": [
       "112:1",
       "112:4",
@@ -4169,7 +4169,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 113",
+    "psalm_id": "Psalm-113",
     "text": [
       "1 Praise Yah! Praise, you servants of Yahweh, praise Yahweh's name.",
       "2 Blessed be Yahweh's name, from this time forward and forever more.",
@@ -4199,7 +4199,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 114",
+    "psalm_id": "Psalm-114",
     "text": [
       "1 When Israel went out of Egypt, the house of Jacob from a people of foreign language;",
       "2 Judah became his sanctuary, Israel his dominion.",
@@ -4229,7 +4229,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 115",
+    "psalm_id": "Psalm-115",
     "text": [
       "1 Not to us, Yahweh, not to us, but to your name give glory, for your loving kindness, and for your truth's sake.",
       "2 Why should the nations say, 'Where is their God, now?'",
@@ -4270,7 +4270,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 116",
+    "psalm_id": "Psalm-116",
     "text": [
       "1 I love Yahweh, because he listens to my voice, and my cries for mercy.",
       "2 Because he has turned his ear to me, therefore I will call on him as long as I live.",
@@ -4311,7 +4311,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 117",
+    "psalm_id": "Psalm-117",
     "text": [
       "1 Praise Yahweh, all you nations! Extol him, all you peoples!",
       "2 For his loving kindness is great toward us. Yahweh's faithfulness endures forever. Praise Yah!"
@@ -4326,14 +4326,14 @@
       "celebration",
       "exultation"
     ],
-    "historical_usage": "The shortest psalm and shortest chapter in the Bible. Part of the Egyptian Hallel. Quoted by Paul in Romans 15:11 regarding Gentile inclusion.",
+    "historical_usage": "The shortest Psalm-and shortest chapter in the Bible. Part of the Egyptian Hallel. Quoted by Paul in Romans 15:11 regarding Gentile inclusion.",
     "key_verses": [
       "117:1",
       "117:2"
     ]
   },
   {
-    "psalm_id": "Psalm 118",
+    "psalm_id": "Psalm-118",
     "text": [
       "1 Give thanks to Yahweh, for he is good, for his loving kindness endures forever.",
       "2 Let Israel now say that his loving kindness endures forever.",
@@ -4376,7 +4376,7 @@
       "joy",
       "gratitude"
     ],
-    "historical_usage": "Concludes the Egyptian Hallel. The last psalm Jesus sang before the crucifixion. Verse 22 is quoted multiple times in the NT regarding Christ as the rejected cornerstone. Verse 26 was shouted at Jesus's triumphal entry.",
+    "historical_usage": "Concludes the Egyptian Hallel. The last Psalm-Jesus sang before the crucifixion. Verse 22 is quoted multiple times in the NT regarding Christ as the rejected cornerstone. Verse 26 was shouted at Jesus's triumphal entry.",
     "key_verses": [
       "118:6",
       "118:8-9",
@@ -4386,7 +4386,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 119a",
+    "psalm_id": "Psalm-119a",
     "text": [
       "1 Blessed are those whose ways are blameless, who walk according to Yahweh's law.",
       "2 Blessed are those who keep his statutes, who seek him with their whole heart.",
@@ -4407,7 +4407,7 @@
       "commitment",
       "reverence"
     ],
-    "historical_usage": "ALEPH section. Opens Psalm 119 with a beatitude about walking blamelessly in God's law. Sets the tone for the entire psalm's meditation on Scripture.",
+    "historical_usage": "ALEPH section. Opens Psalm-119 with a beatitude about walking blamelessly in God's law. Sets the tone for the entire psalm's meditation on Scripture.",
     "key_verses": [
       "119:1",
       "119:2",
@@ -4415,7 +4415,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 119b",
+    "psalm_id": "Psalm-119b",
     "text": [
       "9 How can a young man keep his way pure? By living according to your word.",
       "10 With my whole heart, I have sought you. Don't let me wander from your commandments.",
@@ -4444,7 +4444,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 119c",
+    "psalm_id": "Psalm-119c",
     "text": [
       "17 Do good to your servant. I will live and I will obey your word.",
       "18 Open my eyes, that I may see wondrous things out of your law.",
@@ -4473,7 +4473,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 119d",
+    "psalm_id": "Psalm-119d",
     "text": [
       "25 My soul is laid low in the dust. Revive me according to your word!",
       "26 I declared my ways, and you answered me. Teach me your statutes.",
@@ -4502,7 +4502,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 119e",
+    "psalm_id": "Psalm-119e",
     "text": [
       "33 Teach me, Yahweh, the way of your statutes. I will keep them to the end.",
       "34 Give me understanding, and I will keep your law. Yes, I will obey it with my whole heart.",
@@ -4530,7 +4530,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 119f",
+    "psalm_id": "Psalm-119f",
     "text": [
       "41 Let your loving kindness also come to me, Yahweh, your salvation, according to your word.",
       "42 So I will have an answer for him who reproaches me, for I trust in your word.",
@@ -4559,7 +4559,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 119g",
+    "psalm_id": "Psalm-119g",
     "text": [
       "49 Remember your word to your servant, because you gave me hope.",
       "50 This is my comfort in my affliction, for your word has revived me.",
@@ -4587,7 +4587,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 119h",
+    "psalm_id": "Psalm-119h",
     "text": [
       "57 Yahweh is my portion. I promised to obey your words.",
       "58 I sought your favor with my whole heart. Be merciful to me according to your word.",
@@ -4616,7 +4616,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 119i",
+    "psalm_id": "Psalm-119i",
     "text": [
       "65 Do good to your servant, according to your word, Yahweh.",
       "66 Teach me good judgment and knowledge, for I believe in your commandments.",
@@ -4645,7 +4645,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 119j",
+    "psalm_id": "Psalm-119j",
     "text": [
       "73 Your hands have made me and formed me. Give me understanding, that I may learn your commandments.",
       "74 Those who fear you will see me and be glad, because I have put my hope in your word.",
@@ -4674,7 +4674,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 119k",
+    "psalm_id": "Psalm-119k",
     "text": [
       "81 My soul faints for your salvation. I hope in your word.",
       "82 My eyes fail for your word. I say, 'When will you comfort me?'",
@@ -4702,7 +4702,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 119l",
+    "psalm_id": "Psalm-119l",
     "text": [
       "89 Yahweh, your word is settled in heaven forever.",
       "90 Your faithfulness is to all generations. You have established the earth, and it remains.",
@@ -4731,7 +4731,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 119m",
+    "psalm_id": "Psalm-119m",
     "text": [
       "97 How I love your law! It is my meditation all day.",
       "98 Your commandments make me wiser than my enemies, for your commandments are always with me.",
@@ -4760,7 +4760,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 119n",
+    "psalm_id": "Psalm-119n",
     "text": [
       "105 Your word is a lamp to my feet, and a light for my path.",
       "106 I have sworn, and have confirmed it, that I will obey your righteous ordinances.",
@@ -4789,7 +4789,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 119o",
+    "psalm_id": "Psalm-119o",
     "text": [
       "113 I hate double-minded men, but I love your law.",
       "114 You are my hiding place and my shield. I hope in your word.",
@@ -4817,7 +4817,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 119p",
+    "psalm_id": "Psalm-119p",
     "text": [
       "121 I have done what is just and righteous. Don't leave me to my oppressors.",
       "122 Ensure your servant's well-being. Don't let the proud oppress me.",
@@ -4845,7 +4845,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 119q",
+    "psalm_id": "Psalm-119q",
     "text": [
       "129 Your testimonies are wonderful, therefore my soul keeps them.",
       "130 The entrance of your words gives light. It gives understanding to the simple.",
@@ -4874,7 +4874,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 119r",
+    "psalm_id": "Psalm-119r",
     "text": [
       "137 You are righteous, Yahweh. Your judgments are upright.",
       "138 You have commanded your statutes in righteousness. They are fully trustworthy.",
@@ -4903,7 +4903,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 119s",
+    "psalm_id": "Psalm-119s",
     "text": [
       "145 I have called with my whole heart. Answer me, Yahweh! I will keep your statutes.",
       "146 I have called to you. Save me! I will obey your statutes.",
@@ -4932,7 +4932,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 119t",
+    "psalm_id": "Psalm-119t",
     "text": [
       "153 Consider my affliction, and deliver me, for I don't forget your law.",
       "154 Plead my cause, and redeem me! Revive me according to your promise.",
@@ -4961,7 +4961,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 119u",
+    "psalm_id": "Psalm-119u",
     "text": [
       "161 Princes have persecuted me without a cause, but my heart stands in awe of your words.",
       "162 I rejoice at your word, as one who finds great plunder.",
@@ -4990,7 +4990,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 119v",
+    "psalm_id": "Psalm-119v",
     "text": [
       "169 Let my cry come before you, Yahweh. Give me understanding according to your word.",
       "170 Let my supplication come before you. Deliver me according to your word.",
@@ -5011,7 +5011,7 @@
       "humility",
       "hope"
     ],
-    "historical_usage": "TAW section. Concludes Psalm 119 with a humble confession of being like a lost sheep, yet still clinging to God's commandments. A fitting end to this meditation on Scripture.",
+    "historical_usage": "TAW section. Concludes Psalm-119 with a humble confession of being like a lost sheep, yet still clinging to God's commandments. A fitting end to this meditation on Scripture.",
     "key_verses": [
       "119:174",
       "119:175",
@@ -5019,7 +5019,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 120",
+    "psalm_id": "Psalm-120",
     "text": [
       "1 In my distress, I cried to Yahweh. He answered me.",
       "2 Deliver my soul, Yahweh, from lying lips, from a deceitful tongue.",
@@ -5047,7 +5047,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 121",
+    "psalm_id": "Psalm-121",
     "text": [
       "1 I will lift up my eyes to the hills. Where does my help come from?",
       "2 My help comes from Yahweh, who made heaven and earth.",
@@ -5077,7 +5077,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 122",
+    "psalm_id": "Psalm-122",
     "text": [
       "1 I was glad when they said to me, 'Let's go to Yahweh's house!'",
       "2 Our feet are standing within your gates, Jerusalem;",
@@ -5108,7 +5108,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 123",
+    "psalm_id": "Psalm-123",
     "text": [
       "1 To you I lift up my eyes, you who sit in the heavens.",
       "2 Behold, as the eyes of servants look to the hand of their master, as the eyes of a maid to the hand of her mistress; so our eyes look to Yahweh, our God, until he has mercy on us.",
@@ -5133,7 +5133,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 124",
+    "psalm_id": "Psalm-124",
     "text": [
       "1 If it had not been Yahweh who was on our side, let Israel now say,",
       "2 if it had not been Yahweh who was on our side, when men rose up against us;",
@@ -5162,7 +5162,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 125",
+    "psalm_id": "Psalm-125",
     "text": [
       "1 Those who trust in Yahweh are as Mount Zion, which can't be moved, but remains forever.",
       "2 As the mountains surround Jerusalem, so Yahweh surrounds his people from this time forward and forever more.",
@@ -5188,7 +5188,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 126",
+    "psalm_id": "Psalm-126",
     "text": [
       "1 When Yahweh brought back those who returned to Zion, we were like those who dream.",
       "2 Then our mouth was filled with laughter, and our tongue with singing. Then they said among the nations, 'Yahweh has done great things for them.'",
@@ -5216,7 +5216,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 127",
+    "psalm_id": "Psalm-127",
     "text": [
       "1 Unless Yahweh builds the house, they who build it labor in vain. Unless Yahweh watches over the city, the watchman guards it in vain.",
       "2 It is vain for you to rise up early, to stay up late, eating the bread of toil; for he gives sleep to his loved ones.",
@@ -5243,7 +5243,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 128",
+    "psalm_id": "Psalm-128",
     "text": [
       "1 Blessed is everyone who fears Yahweh, who walks in his ways.",
       "2 For you will eat the labor of your hands. You will be happy, and it will be well with you.",
@@ -5271,7 +5271,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 129",
+    "psalm_id": "Psalm-129",
     "text": [
       "1 Many times they have afflicted me from my youth up. Let Israel now say,",
       "2 many times they have afflicted me from my youth up, yet they have not prevailed against me.",
@@ -5299,7 +5299,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 130",
+    "psalm_id": "Psalm-130",
     "text": [
       "1 Out of the depths I have cried to you, Yahweh.",
       "2 Lord, hear my voice. Let your ears be attentive to the voice of my petitions.",
@@ -5330,7 +5330,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 131",
+    "psalm_id": "Psalm-131",
     "text": [
       "1 Yahweh, my heart isn't arrogant, nor my eyes lofty; nor do I concern myself with great matters, or things too wonderful for me.",
       "2 Surely I have stilled and quieted my soul, like a weaned child with his mother, like a weaned child is my soul within me.",
@@ -5347,14 +5347,14 @@
       "simplicity",
       "trust"
     ],
-    "historical_usage": "A song of ascents by David. A brief psalm expressing childlike trust and humility. The image of a weaned child is a picture of contentment.",
+    "historical_usage": "A song of ascents by David. A brief Psalm-expressing childlike trust and humility. The image of a weaned child is a picture of contentment.",
     "key_verses": [
       "131:1",
       "131:2"
     ]
   },
   {
-    "psalm_id": "Psalm 132",
+    "psalm_id": "Psalm-132",
     "text": [
       "1 Yahweh, remember David and all his affliction,",
       "2 how he swore to Yahweh, and vowed to the Mighty One of Jacob:",
@@ -5394,7 +5394,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 133",
+    "psalm_id": "Psalm-133",
     "text": [
       "1 See how good and how pleasant it is for brothers to live together in unity!",
       "2 It is like the precious oil on the head, that ran down on the beard, even Aaron's beard; that came down on the edge of his robes;",
@@ -5418,7 +5418,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 134",
+    "psalm_id": "Psalm-134",
     "text": [
       "1 Look! Praise Yahweh, all you servants of Yahweh, who stand by night in Yahweh's house!",
       "2 Lift up your hands in the sanctuary. Praise Yahweh!",
@@ -5442,7 +5442,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 135",
+    "psalm_id": "Psalm-135",
     "text": [
       "1 Praise Yah! Praise Yahweh's name! Praise him, you servants of Yahweh,",
       "2 you who stand in Yahweh's house, in the courts of our God's house.",
@@ -5477,7 +5477,7 @@
       "gratitude",
       "awe"
     ],
-    "historical_usage": "A hymn of praise recounting God's mighty acts in history. Similar to Psalm 136 in structure and content.",
+    "historical_usage": "A hymn of praise recounting God's mighty acts in history. Similar to Psalm-136 in structure and content.",
     "key_verses": [
       "135:3",
       "135:5-6",
@@ -5486,7 +5486,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 136",
+    "psalm_id": "Psalm-136",
     "text": [
       "1 Give thanks to Yahweh, for he is good; for his loving kindness endures forever.",
       "2 Give thanks to the God of gods; for his loving kindness endures forever.",
@@ -5534,7 +5534,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 137",
+    "psalm_id": "Psalm-137",
     "text": [
       "1 By the rivers of Babylon, there we sat down. Yes, we wept, when we remembered Zion.",
       "2 On the willows in that land, we hung up our harps.",
@@ -5565,7 +5565,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 138",
+    "psalm_id": "Psalm-138",
     "text": [
       "1 I will give you thanks with my whole heart. Before the gods, I will sing praises to you.",
       "2 I will bow down toward your holy temple, and give thanks to your Name for your loving kindness and for your truth; for you have exalted your Name and your Word above all.",
@@ -5586,7 +5586,7 @@
       "confidence",
       "praise"
     ],
-    "historical_usage": "A psalm of David. A thanksgiving for answered prayer with confidence in God's continued faithfulness.",
+    "historical_usage": "A Psalm-of David. A thanksgiving for answered prayer with confidence in God's continued faithfulness.",
     "key_verses": [
       "138:2",
       "138:3",
@@ -5595,7 +5595,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 139",
+    "psalm_id": "Psalm-139",
     "text": [
       "1 Yahweh, you have searched me, and you know me.",
       "2 You know my sitting down and my rising up. You perceive my thoughts from afar.",
@@ -5633,7 +5633,7 @@
       "wonder",
       "vulnerability"
     ],
-    "historical_usage": "A psalm of David. One of the most profound meditations on God's intimate knowledge of each person. Verses 13-16 are central to discussions of the sanctity of life.",
+    "historical_usage": "A Psalm-of David. One of the most profound meditations on God's intimate knowledge of each person. Verses 13-16 are central to discussions of the sanctity of life.",
     "key_verses": [
       "139:1-4",
       "139:7-10",
@@ -5642,7 +5642,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 140",
+    "psalm_id": "Psalm-140",
     "text": [
       "1 Deliver me, Yahweh, from evil men. Preserve me from violent men;",
       "2 those who devise mischief in their hearts. They continually gather themselves together for war.",
@@ -5669,7 +5669,7 @@
       "confidence",
       "plea"
     ],
-    "historical_usage": "A psalm of David. A prayer for protection from violent enemies and slanderers.",
+    "historical_usage": "A Psalm-of David. A prayer for protection from violent enemies and slanderers.",
     "key_verses": [
       "140:1",
       "140:6-7",
@@ -5677,7 +5677,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 141",
+    "psalm_id": "Psalm-141",
     "text": [
       "1 Yahweh, I have called on you. Come to me quickly! Listen to my voice when I call to you.",
       "2 Let my prayer be set before you like incense; the lifting up of my hands like the evening sacrifice.",
@@ -5701,7 +5701,7 @@
       "vulnerability",
       "trust"
     ],
-    "historical_usage": "A psalm of David. A prayer for God's protection and for self-control. Verse 2 compares prayer to incense and sacrifice.",
+    "historical_usage": "A Psalm-of David. A prayer for God's protection and for self-control. Verse 2 compares prayer to incense and sacrifice.",
     "key_verses": [
       "141:2",
       "141:3",
@@ -5709,7 +5709,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 142",
+    "psalm_id": "Psalm-142",
     "text": [
       "1 I cry with my voice to Yahweh. With my voice, I ask Yahweh for mercy.",
       "2 I pour out my complaint before him. I tell him my troubles.",
@@ -5738,7 +5738,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 143",
+    "psalm_id": "Psalm-143",
     "text": [
       "1 Hear my prayer, Yahweh. Listen to my petitions. In your faithfulness and righteousness, relieve me.",
       "2 Don't enter into judgment with your servant, for in your sight no man living is righteous.",
@@ -5764,7 +5764,7 @@
       "longing",
       "trust"
     ],
-    "historical_usage": "A psalm of David. One of the seven Penitential Psalms. A prayer for deliverance and guidance in desperate circumstances.",
+    "historical_usage": "A Psalm-of David. One of the seven Penitential Psalms. A prayer for deliverance and guidance in desperate circumstances.",
     "key_verses": [
       "143:2",
       "143:6",
@@ -5773,7 +5773,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 144",
+    "psalm_id": "Psalm-144",
     "text": [
       "1 Blessed be Yahweh, my rock, who teaches my hands to war, and my fingers to battle:",
       "2 my loving kindness, my fortress, my high tower, my deliverer, my shield, and he in whom I take refuge; who subdues my people under me.",
@@ -5802,7 +5802,7 @@
       "gratitude",
       "hope"
     ],
-    "historical_usage": "A psalm of David. A royal psalm combining prayer for victory with vision of future blessing.",
+    "historical_usage": "A Psalm-of David. A royal Psalm-combining prayer for victory with vision of future blessing.",
     "key_verses": [
       "144:1-2",
       "144:3-4",
@@ -5810,7 +5810,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 145",
+    "psalm_id": "Psalm-145",
     "text": [
       "1 I will exalt you, my God, the King. I will praise your name forever and ever.",
       "2 Every day I will praise you. I will extol your name forever and ever.",
@@ -5845,7 +5845,7 @@
       "gratitude",
       "awe"
     ],
-    "historical_usage": "A psalm of praise by David. An acrostic psalm (in Hebrew). Used in Jewish daily prayers. Celebrates God's character and kingdom.",
+    "historical_usage": "A Psalm-of praise by David. An acrostic Psalm-(in Hebrew). Used in Jewish daily prayers. Celebrates God's character and kingdom.",
     "key_verses": [
       "145:3",
       "145:8-9",
@@ -5854,7 +5854,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 146",
+    "psalm_id": "Psalm-146",
     "text": [
       "1 Praise Yah! Praise Yahweh, my soul.",
       "2 While I live, I will praise Yahweh. I will sing praises to my God as long as I exist.",
@@ -5886,7 +5886,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 147",
+    "psalm_id": "Psalm-147",
     "text": [
       "1 Praise Yah, for it is good to sing praises to our God; for it is pleasant and fitting to praise him.",
       "2 Yahweh builds up Jerusalem. He gathers together the outcasts of Israel.",
@@ -5929,7 +5929,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 148",
+    "psalm_id": "Psalm-148",
     "text": [
       "1 Praise Yah! Praise Yahweh from the heavens! Praise him in the heights!",
       "2 Praise him, all his angels! Praise him, all his army!",
@@ -5963,7 +5963,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 149",
+    "psalm_id": "Psalm-149",
     "text": [
       "1 Praise Yahweh! Sing to Yahweh a new song, his praise in the assembly of the saints.",
       "2 Let Israel rejoice in him who made them. Let the children of Zion be joyful in their King.",
@@ -5994,7 +5994,7 @@
     ]
   },
   {
-    "psalm_id": "Psalm 150",
+    "psalm_id": "Psalm-150",
     "text": [
       "1 Praise Yah! Praise God in his sanctuary! Praise him in his heavens for his acts of power!",
       "2 Praise him for his mighty acts! Praise him according to his excellent greatness!",

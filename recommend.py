@@ -98,16 +98,19 @@ def search_psalms(user_feeling: str, top_k: int = 3) -> list:
     results = search_client.search(
         search_text=user_feeling,
         vector_queries=[vector_query],
-        select=["psalm_number", "title", "themes", "emotional_context", "key_verses", "summary"],
+        select=[                          # ← updated to match actual index fields
+            "psalm_id",
+            "text",
+            "themes",
+            "emotional_context",
+            "historical_usage",
+            "key_verses"
+        ],
         top=top_k
     )
 
     return list(results)
 
-
-# ─────────────────────────────────────────────
-# GPT / CHAT COMPLETION
-# ─────────────────────────────────────────────
 
 def generate_recommendation(user_feeling: str) -> str:
     psalm_results = search_psalms(user_feeling)
@@ -115,11 +118,12 @@ def generate_recommendation(user_feeling: str) -> str:
     context = ""
     for r in psalm_results:
         context += f"""
-Psalm {r['psalm_number']}: {r['title']}
+{r['psalm_id']}
 Themes: {r['themes']}
-Why it fits: {r['emotional_context']}
+Emotional context: {r['emotional_context']}
+Historical usage: {r['historical_usage']}
 Key verses: {r['key_verses']}
-Summary: {r['summary']}
+Text: {r['text']}
 ---"""
 
     system_prompt = """You are a compassionate spiritual guide helping someone find psalms to pray through. 
