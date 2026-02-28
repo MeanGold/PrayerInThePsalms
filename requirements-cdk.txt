@@ -1,0 +1,8 @@
+# AWS CDK dependencies for infrastructure deployment
+# Install with: pip install -r requirements-cdk.txt
+
+aws-cdk-lib>=2.100.0
+constructs>=10.0.0
+
+# Include application dependencies
+-r requirements.txt
