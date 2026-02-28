@@ -1,11 +1,30 @@
 import { useState, useRef, useEffect } from 'react'
 import './App.css'
+import { BookOpen } from 'lucide-react'
 
 interface Message {
   id: number
   text: string
   sender: 'user' | 'bot'
   timestamp: Date
+}
+
+type View = 'chat' | 'psalms' | 'psalm-detail'
+
+interface PsalmMetadata {
+  psalm_id: string
+  themes: string[]
+  emotional_context: string[]
+}
+
+interface Psalm {
+  psalm_number: number
+  psalm_id: string
+  text: string[]
+  themes: string[]
+  emotional_context: string[]
+  historical_usage: string
+  key_verses: string[]
 }
 
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000'
@@ -16,6 +35,9 @@ function App() {
   const [isLoading, setIsLoading] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const [theme, setTheme] = useState<'editorial' | 'sacred-night'>('editorial')
+  const [currentView, setCurrentView] = useState<View>('chat')
+  const [psalms, setPsalms] = useState<PsalmMetadata[]>([])
+  const [selectedPsalm, setSelectedPsalm] = useState<Psalm | null>(null)
   const messagesEndRef = useRef<HTMLDivElement>(null)
   const abortControllerRef = useRef<AbortController | null>(null)
   const typingIntervalRef = useRef<number | null>(null)
@@ -132,7 +154,10 @@ function App() {
     setIsLoading(true)
 
     try {
+<<<<<<< HEAD
       // const recommendation = "It warms my heart to hear about your upbeat and positive spirit as you work on your project. In this joyous season of your life, I’d love to share a few psalms that can enrich your gratitude and confidence as you move forward. **Psalm 92**: This psalm beautifully embodies a spirit of thanksgiving and joy. It begins with the declaration, \"It is a good thing to give thanks to Yahweh\" (92:1), which resonates with your uplifting mood. The verses that follow express how God’s works bring gladness and triumph to our hearts. As you see your project flourishing, you might find comfort in verse 12, which says, \"The righteous shall flourish like the palm tree.\" This imagery can remind you that your hard work, coupled with faith, can lead to beautiful growth and success. Embracing this psalm can deepen your sense of gratitude for the positive outcomes you are experiencing. **Psalm 108**: This psalm exudes confidence and determination, reflecting a heart ready to sing praises and trust in God’s guidance. You might find encouragement in verse 1, \"My heart is steadfast, God. I will sing and I will make music with my soul.\" As you work on your project, this reminder of steadfastness can inspire you to keep pursuing your goals with passion. The assurance in verse 13, \"Through God, we will do valiantly,\" can uplift you, reinforcing your faith that your efforts are supported by a greater power. Let this psalm be a source of motivation as you continue your journey. **Psalm 112**: This psalm speaks of blessings and stability, celebrating the life of one who delights in righteousness. It begins with \"Praise Yah! Blessed is the man who fears Yahweh\" (112:1), inviting you to reflect on the blessings in your own life. As you experience success, you might resonate with verse 7, \"His heart is steadfast, trusting in Yahweh,\" which encourages you to maintain that positive and confident outlook. The reminder that \"wealth and riches are in his house\" (112:3) can serve as a metaphor for the richness of experiences and achievements you’re gaining through your project. May these psalms bring you even more joy and affirmation in this wonderful chapter of your life!"
+=======
+>>>>>>> 182c336b873969366969f1fa984075cd92165201
       const recommendation = await fetchRecommendation(userText, abortController.signal)
       const formattedRecommendation = recommendation.replaceAll("**Psalm", "\n\n**Psalm")
 
@@ -179,10 +204,34 @@ function App() {
     }
   }
 
-  const handleHintClick = (hint: string) => {
-    setInputValue(hint)
-    const inputElement = document.getElementById('chatInput') as HTMLInputElement
-    if (inputElement) inputElement.focus()
+
+  const fetchAllPsalms = async () => {
+    try {
+      const response = await fetch(`${API_URL}/psalms`)
+      const data = await response.json()
+      setPsalms(data.psalms)
+    } catch (error) {
+      console.error('Failed to fetch psalms:', error)
+    }
+  }
+
+  const fetchPsalm = async (psalmNumber: number) => {
+    try {
+      const response = await fetch(`${API_URL}/psalms/${psalmNumber}`)
+      const data = await response.json()
+      setSelectedPsalm(data)
+      setCurrentView('psalm-detail')
+    } catch (error) {
+      console.error('Failed to fetch psalm:', error)
+    }
+  }
+
+  const handleViewChange = (view: View) => {
+    setCurrentView(view)
+    setMenuOpen(false)
+    if (view === 'psalms' && psalms.length === 0) {
+      fetchAllPsalms()
+    }
   }
 
   return (
@@ -246,7 +295,7 @@ function App() {
         {/* Sidebar */}
         <div className={`sidebar ${menuOpen ? 'open' : ''}`}>
           <div className="sidebar-logo">
-            <h1 className="sidebar-title">{theme === 'editorial' ? 'Psalm' : <span>PSALM<span style={{color: '#d4a843'}}>AI</span></span>}</h1>
+            <h1 className="sidebar-title">{theme === 'editorial' ? 'Psalm' : <span>PSALMS</span>}</h1>
             <p>{theme === 'editorial' ? 'Daily Scripture Companion' : 'Ancient Wisdom'}</p>
           </div>
           <div className="sidebar-divider"></div>
@@ -261,13 +310,13 @@ function App() {
             </div>
           )}
           <div className="nav-links">
-            <div className="nav-link active" onClick={() => setMenuOpen(false)}>
+            <div className={`nav-link ${currentView === 'chat' ? 'active' : ''}`} onClick={() => handleViewChange('chat')}>
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                 <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
               </svg>
               Chat
             </div>
-            <div className="nav-link" onClick={() => setMenuOpen(false)}>
+            <div className={`nav-link ${currentView === 'psalms' || currentView === 'psalm-detail' ? 'active' : ''}`} onClick={() => handleViewChange('psalms')}>
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                 <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
                 <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
@@ -280,48 +329,39 @@ function App() {
         {/* Main Column */}
         <div className="main-col">
 
-          {/* Header */}
-          <div className="chat-header">
-            {theme === 'editorial' ? (
-              <>
-                <div>
-                  <div className="header-title">Scripture Chat</div>
-                  <div className="header-sub">Ask anything about the Psalms</div>
-                </div>
-                <div className="header-tags">
-                  <div className="tag active">Psalms</div>
-                  <div className="tag">Hebrew</div>
-                  <div className="tag">History</div>
-                </div>
-              </>
-            ) : (
-              <>
-                <div className="header-left">
-                  <svg className="logo-mark" viewBox="0 0 34 34" fill="none">
-                    <circle cx="17" cy="17" r="15" stroke="#d4a843" strokeWidth="1" opacity="0.4"/>
-                    <circle cx="17" cy="17" r="9" stroke="#d4a843" strokeWidth="1" opacity="0.6"/>
-                    <circle cx="17" cy="17" r="2.5" fill="#d4a843" opacity="0.8"/>
-                    <line x1="17" y1="2" x2="17" y2="32" stroke="#d4a843" strokeWidth="0.75" opacity="0.3"/>
-                    <line x1="2" y1="17" x2="32" y2="17" stroke="#d4a843" strokeWidth="0.75" opacity="0.3"/>
-                  </svg>
-                  <div className="header-title-sacred">
-                    PSALM<span style={{color: '#d4a843'}}>AI</span>
-                  </div>
-                </div>
-                <div className="header-right">
-                  <div className="pulse-dot"></div>
-                  <span className="header-status">Listening</span>
-                </div>
-              </>
-            )}
-          </div>
+          {currentView === 'chat' && (
+            <>
+              {/* Header */}
+              <div className="chat-header">
+                {theme === 'editorial' ? (
+                  <>
+                    <div>
+                      <div className="header-title">Prayer Companion</div>
+                      <div className="header-sub">Ask anything about the Psalms</div>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <div className="header-left">
+                      <BookOpen className='logo-mark' color="#d4a843"/>
+                      <div className="header-title-sacred">
+                        PRAYER<span style={{color: '#d4a843'}}>COMPANION</span>
+                      </div>
+                    </div>
+                    <div className="header-right">
+                      <div className="pulse-dot"></div>
+                      <span className="header-status">Listening</span>
+                    </div>
+                  </>
+                )}
+              </div>
 
-          {/* Messages */}
-          <div className="chat-messages">
+              {/* Messages */}
+              <div className="chat-messages">
             {messages.map((message) => (
               <div key={message.id} className={`msg msg-${message.sender}`}>
                 {theme === 'sacred-night' && (
-                  <div className="msg-label">{message.sender === 'bot' ? 'Scripture' : 'You'}</div>
+                  <div className="msg-label">{message.sender === 'bot' ? 'Prayer Companion' : 'You'}</div>
                 )}
                 <div className="msg-row">
                   <div className={`avatar avatar-${message.sender}`}>
@@ -383,26 +423,74 @@ function App() {
                 </button>
               </div>
             </form>
-            {theme === 'editorial' && (
-              <div className="hint-chips">
-                <div className="hint-chip" onClick={() => handleHintClick("Psalms for anxiety")}>
-                  Psalms for anxiety
-                </div>
-                <div className="hint-chip" onClick={() => handleHintClick("What is selah?")}>
-                  What is selah?
-                </div>
-                <div className="hint-chip" onClick={() => handleHintClick("Psalm 23 in depth")}>
-                  Psalm 23 in depth
-                </div>
-                <div className="hint-chip" onClick={() => handleHintClick("Psalms of ascent")}>
-                  Psalms of ascent
-                </div>
-              </div>
-            )}
             {theme === 'sacred-night' && (
               <div className="footer-note">meditatio · lectio · oratio</div>
             )}
           </div>
+            </>
+          )}
+
+          {currentView === 'psalms' && (
+            <div className="psalms-grid-container">
+              <div className="psalms-grid-header">
+                <h2>All Psalms</h2>
+                <p>Browse the complete collection of 150 Psalms</p>
+              </div>
+              <div className="psalms-grid">
+                {psalms.map((psalm) => {
+                  const psalmNum = parseInt(psalm.psalm_id.replace('Psalm ', ''))
+                  return (
+                    <div 
+                      key={psalm.psalm_id} 
+                      className="psalm-card"
+                      onClick={() => fetchPsalm(psalmNum)}
+                    >
+                      <div className="psalm-card-number">{psalmNum}</div>
+                      <div className="psalm-card-themes">
+                        {psalm.themes.slice(0, 2).map((theme, idx) => (
+                          <span key={idx} className="psalm-card-tag">{theme}</span>
+                        ))}
+                      </div>
+                    </div>
+                  )
+                })}
+              </div>
+            </div>
+          )}
+
+          {currentView === 'psalm-detail' && selectedPsalm && (
+            <div className="psalm-detail-container">
+              <button className="back-btn" onClick={() => setCurrentView('psalms')}>
+                ← Back to All Psalms
+              </button>
+              <div className="psalm-detail">
+                <h1 className="psalm-detail-title">{selectedPsalm.psalm_id}</h1>
+                
+                <div className="psalm-detail-meta">
+                  <div className="psalm-detail-themes">
+                    {selectedPsalm.themes.map((theme, idx) => (
+                      <span key={idx} className="psalm-detail-tag">{theme}</span>
+                    ))}
+                  </div>
+                  <div className="psalm-detail-context">
+                    <strong>Emotional Context:</strong> {selectedPsalm.emotional_context.join(', ')}
+                  </div>
+                </div>
+
+                <div className="psalm-detail-text">
+                  {selectedPsalm.text.map((verse, idx) => (
+                    <p key={idx} className="psalm-verse">{verse}</p>
+                  ))}
+                </div>
+
+                {selectedPsalm.historical_usage && (
+                  <div className="psalm-detail-usage">
+                    <strong>Historical Usage:</strong> {selectedPsalm.historical_usage}
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
 
         </div>
       </div>
