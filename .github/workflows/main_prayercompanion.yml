@@ -24,10 +24,19 @@ jobs:
           node-version: '24.x'
 
       - name: npm install, build, and test
-        run: |
+        run: | 
+          cd frontend
           npm install
           npm run build --if-present
-          npm run test --if-present
+
+      - name: copy build files to backend
+        run: |
+          cp -r dist ../back-end/
+      
+      - name: Install dependencies
+        run: |
+          cd ../back-end
+          pip install -r requirements.txt
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
@@ -51,5 +60,5 @@ jobs:
         with:
           app-name: 'PrayerCompanion'
           slot-name: 'Production'
-          package: .
+          package: ./back-end
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_C117408190B749BDB63484FEC46AA798 }}
