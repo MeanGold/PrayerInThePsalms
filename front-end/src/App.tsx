@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react'
 import './App.css'
 import { BookOpen } from 'lucide-react'
+import ReactMarkdown from 'react-markdown'
 
 interface Message {
   id: number
@@ -41,6 +42,9 @@ function App() {
   const messagesEndRef = useRef<HTMLDivElement>(null)
   const abortControllerRef = useRef<AbortController | null>(null)
   const typingIntervalRef = useRef<number | null>(null)
+  // Add to state
+  const [displayedBotText, setDisplayedBotText] = useState<string>('')
+  const [typingMessageId, setTypingMessageId] = useState<number | null>(null)
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
@@ -63,38 +67,30 @@ function App() {
   }, [messages])
 
   // Typing animation effect
+  // Replace the typing animation useEffect
   useEffect(() => {
     const lastMessage = messages[messages.length - 1]
+    if (!lastMessage || lastMessage.sender !== 'bot') return
 
-    if (!lastMessage || lastMessage.sender !== "bot") return
-
-    const element = document.getElementById(`bot-${lastMessage.id}`)
-    if (!element) return
+    setDisplayedBotText('')
+    setTypingMessageId(lastMessage.id)
 
     let index = 0
     const text = lastMessage.text
 
-    // Clear any existing typing animation
-    if (typingIntervalRef.current) {
-      clearInterval(typingIntervalRef.current)
-    }
+    if (typingIntervalRef.current) clearInterval(typingIntervalRef.current)
 
     typingIntervalRef.current = window.setInterval(() => {
-      element.textContent += text[index]
       index++
+      setDisplayedBotText(text.slice(0, index))
       if (index >= text.length) {
-        if (typingIntervalRef.current) {
-          clearInterval(typingIntervalRef.current)
-          typingIntervalRef.current = null
-        }
+        clearInterval(typingIntervalRef.current!)
+        typingIntervalRef.current = null
       }
     }, 15)
 
     return () => {
-      if (typingIntervalRef.current) {
-        clearInterval(typingIntervalRef.current)
-        typingIntervalRef.current = null
-      }
+      if (typingIntervalRef.current) clearInterval(typingIntervalRef.current)
     }
   }, [messages])
 
@@ -365,13 +361,17 @@ function App() {
                   <div className={`avatar avatar-${message.sender}`}>
                     {message.sender === 'bot' ? '✦' : 'Me'}
                   </div>
+                  {/* Replace the message <p> block inside your messages.map(...) */}
                   <div className="msg-bubble">
-                    <p
-                      id={message.sender === 'bot' ? `bot-${message.id}` : undefined}
-                      style={{ whiteSpace: "pre-line" }}
-                    >
-                      {message.sender === 'user' ? message.text : null}
-                    </p>
+                    {message.sender === 'user' ? (
+                      <p style={{ whiteSpace: 'pre-line' }}>{message.text}</p>
+                    ) : (
+                      <div className="markdown-body">
+                        <ReactMarkdown>
+                          {message.id === typingMessageId ? displayedBotText : message.text}
+                        </ReactMarkdown>
+                      </div>
+                    )}
                   </div>
                 </div>
                 <span className="msg-time">
